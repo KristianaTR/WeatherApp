@@ -1,12 +1,12 @@
-import CitiesList from "../../Components/CitiesList/CitiesList"
-import "./MainPage.css"
+import CitiesList from "../../Components/CitiesList/CitiesList";
+import "./MainPage.css";
 
 const MainPage = () => {
   return (
     <div>
-        <CitiesList/>
+      <CitiesList />
     </div>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;
