@@ -1,0 +1,60 @@
+.citiesListTableWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+}
+
+.CitiesListTable {
+    width: 90%;
+}
+
+.CitiesListTable tr{
+    height: 2rem
+}
+
+.CitiesListTableMonthColumnsTableHead {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 0.9rem;
+    color: #FFC759;
+    height: 1.5rem;
+    border-bottom: 1px solid #FFC759;
+    min-width: 37px;
+}
+
+.CitiesListTableMonthColumns {
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 0.8rem;
+    color: #c99a3e
+}
+
+.CitiesListTableCityColumn {
+    font-family: "Montserrat";
+    font-size: 0.9rem;
+    color: #1F96C9;
+    width: 130px;
+}
+
+.CitiesListPaginationWrapper {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.CitiesListPagination {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    list-style: none;
+    font-family: "Montserrat";
+    font-size: 0.8rem;
+    color: #1F96C9;
+    cursor: pointer;
+}
+
+.CitiesListPagination li {
+    min-width: 1rem;
+}
+/* TODO make it responsive */
