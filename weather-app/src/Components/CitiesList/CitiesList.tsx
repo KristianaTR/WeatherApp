@@ -1,11 +1,13 @@
 import "./CitiesList.css"
 import cities from "../../DataBase/data.js"
 
+// const citiesList: any = cities
+
 const CitiesList = () => {
   return (
     <div>
 
-       Cities List
+       {cities.map((city) => <div>{city.cityName}</div>)}
     
     </div>
   )
