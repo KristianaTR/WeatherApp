@@ -1,0 +1,26 @@
+.MainPageStyling {
+    background: linear-gradient(
+      180deg,
+      rgba(43, 175, 221, 0.6166841736694677) 0%,
+      rgba(67, 172, 215, 1) 0%,
+      rgba(178, 235, 255, 0.5382528011204482) 100%
+    );
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -10;
+    overflow: hidden;
+  }
+
+  .MainPageStylingImageWrapper {
+    width: 150%;
+    height: 150%;
+    margin-left:-25%;
+    bottom: 0;
+    position: relative;
+  }
+
+  .MainPageStylingImage {
+    width: 120%;
+    object-fit: cover;
+  }

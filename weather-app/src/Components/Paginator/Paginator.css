@@ -1,0 +1,35 @@
+.PaginatorWrapper {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.Paginator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  list-style: none;
+  font-family: "Montserrat";
+  font-size: 0.8rem;
+  color: #1f96c9;
+  padding: 0;
+}
+
+.Paginator li {
+  min-width: 1rem;
+  flex-shrink: 0;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 0.2rem 0 0.2rem;
+}
+
+.Paginator button {
+  background-color: transparent;
+  border: none;
+  font-family: "Montserrat";
+  font-size: 0.8rem;
+  color: #1f96c9;
+  cursor: pointer;
+}

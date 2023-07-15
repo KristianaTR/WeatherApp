@@ -1,60 +1,77 @@
 .citiesListTableWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .CitiesListTable {
-    width: 90%;
-}
-
-.CitiesListTable tr{
-    height: 2rem
+  width: 90%;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  background-color: #00008017;
+  border-radius: 20px;
+  padding: 0 1rem 0 1rem;
 }
 
 .CitiesListTableMonthColumnsTableHead {
-    text-align: center;
-    font-family: "Montserrat";
-    font-size: 0.9rem;
-    color: #FFC759;
-    height: 1.5rem;
-    border-bottom: 1px solid #FFC759;
-    min-width: 37px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 0.9rem;
+  color: #ffc759;
+  height: 1.5rem;
+  border-bottom: 1px solid #ffc759;
+  min-width: 37px;
 }
 
 .CitiesListTableMonthColumns {
-    text-align: center;
-    font-family: "Montserrat";
-    font-size: 0.8rem;
-    color: #c99a3e
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #c99a3e;
 }
 
 .CitiesListTableCityColumn {
-    font-family: "Montserrat";
-    font-size: 0.9rem;
-    color: #1F96C9;
-    width: 130px;
+  font-family: "Montserrat";
+  font-size: 0.9rem;
+  color: #1f96c9;
+  width: 130px;
 }
 
-.CitiesListPaginationWrapper {
-    display: flex;
-    justify-content: center;
-    width: 80%;
+.color000080 {
+  color: #000080
 }
-
-.CitiesListPagination {
-    display: flex;
-    justify-content: space-between;
-    width: 20%;
-    list-style: none;
-    font-family: "Montserrat";
-    font-size: 0.8rem;
-    color: #1F96C9;
-    cursor: pointer;
+.color191970 {
+  color: #191970
 }
-
-.CitiesListPagination li {
-    min-width: 1rem;
+.color4169E1 {
+  color: #4169E1
 }
-/* TODO make it responsive */
+.color87CEEB {
+  color: #87CEEB
+}
+.colorF0F8FF {
+  color: #F0F8FF
+}
+.colorwhite {
+  color: white
+}
+.colorFFC0CB {
+  color: #FFC0CB
+}
+.colorFF2400 {
+  color: #FF2400
+}
+.colorDC143C {
+  color: #DC143C
+}
+.color800020 {
+  color: #800020
+}
+.color800000 {
+  color: #800000
+}
+.color8B0000 {
+  color: #8B0000
+}
