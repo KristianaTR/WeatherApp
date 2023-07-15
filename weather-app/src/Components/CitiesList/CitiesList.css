@@ -7,10 +7,11 @@
 
 .CitiesListTable {
   width: 90%;
-}
-
-.CitiesListTable tr {
-  height: 2rem;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  background-color: #00008017;
+  border-radius: 20px;
+  padding: 0 1rem 0 1rem;
 }
 
 .CitiesListTableMonthColumnsTableHead {
@@ -27,6 +28,7 @@
   text-align: center;
   font-family: "Montserrat";
   font-size: 0.8rem;
+  font-weight: 800;
   color: #c99a3e;
 }
 
@@ -37,39 +39,39 @@
   width: 130px;
 }
 
-.CitiesListPaginationWrapper {
-  display: flex;
-  justify-content: center;
-  width: 80%;
+.color000080 {
+  color: #000080
 }
-
-.CitiesListPagination {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  list-style: none;
-  font-family: "Montserrat";
-  font-size: 0.8rem;
-  color: #1f96c9;
+.color191970 {
+  color: #191970
 }
-
-.CitiesListPagination li {
-  min-width: 1rem;
-  flex-shrink: 0;
-  text-align: center;
-  cursor: pointer;
-  margin: 0 0.2rem 0 0.2rem;
+.color4169E1 {
+  color: #4169E1
 }
-
-.CitiesListPagination button {
-  background-color: transparent;
-  border: none;
-  font-family: "Montserrat";
-  font-size: 0.8rem;
-  color: #1f96c9;
-  cursor: pointer;
+.color87CEEB {
+  color: #87CEEB
 }
-
-/* TODO make it responsive */
+.colorF0F8FF {
+  color: #F0F8FF
+}
+.colorwhite {
+  color: white
+}
+.colorFFC0CB {
+  color: #FFC0CB
+}
+.colorFF2400 {
+  color: #FF2400
+}
+.colorDC143C {
+  color: #DC143C
+}
+.color800020 {
+  color: #800020
+}
+.color800000 {
+  color: #800000
+}
+.color8B0000 {
+  color: #8B0000
+}

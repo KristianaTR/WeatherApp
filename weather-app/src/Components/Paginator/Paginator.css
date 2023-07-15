@@ -7,13 +7,14 @@
 .Paginator {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 50%;
   list-style: none;
   font-family: "Montserrat";
   font-size: 0.8rem;
   color: #1f96c9;
+  padding: 0;
 }
 
 .Paginator li {
