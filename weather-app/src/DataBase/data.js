@@ -16,7 +16,10 @@ const cities = [
             December: -2.3,
             Year: 6.2
         },
-        cityPicture: "https://www.daad.lv/files/2022/11/iStock-615926196_1920x900px.jpg"
+        cityPicture:{
+            cityName: "riga",
+            pictureLink: "https://www.daad.lv/files/2022/11/iStock-615926196_1920x900px.jpg"
+        } 
     },
     {
         cityName: "Vilnius",
@@ -35,7 +38,10 @@ const cities = [
             December: -2.9,
             Year: 6.00
         },
-        cityPicture: "https://cdn.britannica.com/26/143426-050-A3F11FE1/town-section-Vilnius-Lithuania.jpg"
+        cityPicture: {
+            cityName: "vilnius",
+            pictureLink: "https://cdn.britannica.com/26/143426-050-A3F11FE1/town-section-Vilnius-Lithuania.jpg"
+        }
     },
     {
         cityName: "Tallin",
@@ -54,7 +60,10 @@ const cities = [
             December: -0.9,
             Year: 6.4
         },
-        cityPicture: "https://www.daad.lv/files/2022/11/iStock-615926196_1920x900px.jpg"
+        cityPicture:{
+            cityName: "tallin",
+            pictureLink: "https://www.daad.lv/files/2022/11/iStock-615926196_1920x900px.jpg"
+        } 
     },
     {
         cityName: "Tirana",
@@ -73,7 +82,10 @@ const cities = [
             December: 8.1,
             Year: 15.2
         },
-        cityPicture: "https://emerging-europe.com/wp-content/uploads/2020/07/bigstock-tirana-albania-june-a-310037863-990x556.jpg"
+        cityPicture: {
+            cityName: "tirana",
+            pictureLink: "https://emerging-europe.com/wp-content/uploads/2020/07/bigstock-tirana-albania-june-a-310037863-990x556.jpg"
+        }
     },
     {
         cityName: "Andorra la Vella",
@@ -92,7 +104,10 @@ const cities = [
             December: 3,
             Year: 9.8
         },
-        cityPicture: "https://travelshelper.com/wp-content/uploads/2021/11/Andorra-la-Vella-Travel-Guide-Travel-S-Helper.jpg"
+        cityPicture: {
+            cityName: "andorra la Vella",
+            pictureLink: "https://travelshelper.com/wp-content/uploads/2021/11/Andorra-la-Vella-Travel-Guide-Travel-S-Helper.jpg"
+        }
     },
     {
         cityName: "Vienna",
@@ -111,7 +126,10 @@ const cities = [
             December: 1.1,
             Year: 10.4
         },
-        cityPicture: "https://res.klook.com/image/upload/Mobile/City/vfg4baggrck0egh36owk.jpg"
+        cityPicture: {
+            cityName: "vienna",
+            pictureLink: "https://res.klook.com/image/upload/Mobile/City/vfg4baggrck0egh36owk.jpg"
+        }
     },
     {
         cityName: "Brussels",
@@ -130,7 +148,10 @@ const cities = [
             December: 3.9,
             Year: 10.5
         },
-        cityPicture: "https://cdn.traghetti.com/porti/tallin187-54811.jpg"
+        cityPicture: {
+            cityName: "brussels",
+            pictureLink: "https://cdn.traghetti.com/porti/tallin187-54811.jpg"
+        }
     },
     {
         cityName: "Split",
@@ -149,7 +170,10 @@ const cities = [
             December: 3.9,
             Year: 10.5
         },
-        cityPicture: "https://www.brattle.com/wp-content/uploads/2021/05/Brussels.png"
+        cityPicture: {
+            cityName: "split",
+            pictureLink: "https://www.brattle.com/wp-content/uploads/2021/05/Brussels.png"
+        }
     },
     {
         cityName: "Amsterdam",
@@ -168,7 +192,10 @@ const cities = [
             December: 4.1,
             Year: 10.7
         },
-        cityPicture: "https://media.timeout.com/images/105504583/750/422/image.jpg"
+        cityPicture: {
+            cityName: "amsterdam",
+            pictureLink: "https://media.timeout.com/images/105504583/750/422/image.jpg"
+        }
     },
     {
         cityName: "Athens",
@@ -187,7 +214,10 @@ const cities = [
             December: 11.4,
             Year: 18.1
         },
-        cityPicture: "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_webp/https://funworldfacts.com/wp-content/uploads/2022/12/athens-facts.jpg"
+        cityPicture: {
+            cityName: "athens",
+            pictureLink: "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_webp/https://funworldfacts.com/wp-content/uploads/2022/12/athens-facts.jpg"
+        }
     },
     {
         cityName: "Berlin",
@@ -206,7 +236,10 @@ const cities = [
             December: 1.3,
             Year: 9.3
         },
-        cityPicture: "https://www.berlin.de/binaries/asset/image_assets/6340464/ratio_2_1/1685015071/1500x750/"
+        cityPicture: {
+            cityName: "berlin",
+            pictureLink: "https://www.berlin.de/binaries/asset/image_assets/6340464/ratio_2_1/1685015071/1500x750/"
+        }
     },
     {
         cityName: "Budapest",
@@ -225,7 +258,10 @@ const cities = [
             December: 1,
             Year: 10.8
         },
-        cityPicture: "https://santorinidave.com/wp-content/uploads/2022/06/budapest-best-places-four-seasons.jpeg"
+        cityPicture: {
+            cityName: "budapest",
+            pictureLink: "https://santorinidave.com/wp-content/uploads/2022/06/budapest-best-places-four-seasons.jpeg"
+        }
     },
     {
         cityName: "Dublin",
@@ -244,7 +280,10 @@ const cities = [
             December: 7.4,
             Year: 11.3
         },
-        cityPicture: "https://osi.ie/wp-content/uploads/2018/08/dublin-skyline.jpg"
+        cityPicture: {
+            cityName: "dublin",
+            pictureLink: "https://osi.ie/wp-content/uploads/2018/08/dublin-skyline.jpg"
+        }
     },
     {
         cityName: "Helsinki",
@@ -263,7 +302,10 @@ const cities = [
             December: -4.1,
             Year: 4.2
         },
-        cityPicture: "https://larnefc.com/wp-content/uploads/2023/07/128641704_gettyimages-1216740151.jpg"
+        cityPicture: {
+            cityName: "helsinki",
+            pictureLink: "https://larnefc.com/wp-content/uploads/2023/07/128641704_gettyimages-1216740151.jpg"
+        }
     },
     {
         cityName: "Milan",
@@ -282,7 +324,10 @@ const cities = [
             December: 4.3,
             Year: 13.2
         },
-        cityPicture: "https://media.timeout.com/images/105186767/image.jpg"
+        cityPicture: {
+            cityName: "milan",
+            pictureLink: "https://media.timeout.com/images/105186767/image.jpg"
+        }
     },
     {
         cityName: "Rome",
@@ -301,7 +346,10 @@ const cities = [
             December: 8.4,
             Year: 15.8
         },
-        cityPicture: "https://media.timeout.com/images/105211673/image.jpg"
+        cityPicture: {
+            cityName: "rome",
+            pictureLink: "https://media.timeout.com/images/105211673/image.jpg"
+        }
     },
     {
         cityName: "Napoli",
@@ -320,7 +368,10 @@ const cities = [
             December: 10.3,
             Year: 16.7
         },
-        cityPicture: "https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/napoli_1.jpg"
+        cityPicture: {
+            cityName: "napoli",
+            pictureLink: "https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/napoli_1.jpg"
+        }
     },
     {
         cityName: "Luxembourg City",
@@ -339,7 +390,10 @@ const cities = [
             December: 2,
             Year: 9.1
         },
-        cityPicture: "https://cdn-cms.bookingexperts.nl/media/460/40/optimized.JPG"
+        cityPicture: {
+            cityName: "luxembourg city",
+            pictureLink: "https://cdn-cms.bookingexperts.nl/media/460/40/optimized.JPG"
+        }
     },
     {
         cityName: "Bucharest",
@@ -358,7 +412,10 @@ const cities = [
             December: 0.6,
             Year: 11.8
         },
-        cityPicture: "https://www.ec2023bucharest.com/wp-content/uploads/2022/10/Bucharest.png"
+        cityPicture: {
+            cityName: "bucharest",
+            pictureLink: "https://www.ec2023bucharest.com/wp-content/uploads/2022/10/Bucharest.png"
+        }
     },
     {
         cityName: "Bratislava",
@@ -377,7 +434,10 @@ const cities = [
             December: -0.6,
             Year: 8.9
         },
-        cityPicture: "https://media-cdn.tripadvisor.com/media/photo-s/1a/7e/36/e2/caption.jpg"
+        cityPicture: {
+            cityName: "bratislava",
+            pictureLink: "https://media-cdn.tripadvisor.com/media/photo-s/1a/7e/36/e2/caption.jpg"
+        }
     },
     {
         cityName: "Ljubljana",
@@ -396,7 +456,10 @@ const cities = [
             December: 0.7,
             Year: 10.1
         },
-        cityPicture: "https://newinzurich.com/wp-content/uploads/2021/10/245648986_4898153473568959_4257169892251845500_n.jpg"
+        cityPicture: {
+            cityName: "ljubljana",
+            pictureLink: "https://newinzurich.com/wp-content/uploads/2021/10/245648986_4898153473568959_4257169892251845500_n.jpg"
+        }
     },
     {
         cityName: "Barcelona",
@@ -415,7 +478,10 @@ const cities = [
             December: 13.2,
             Year: 18.9
         },
-        cityPicture: "https://media.cntraveller.com/photos/62d14e029bbb08746e6fd952/3:2/w_6000,h_4000,c_limit/barcelonaGettyImages-1386922276.jpeg"
+        cityPicture: {
+            cityName: "barcelona",
+            pictureLink: "https://media.cntraveller.com/photos/62d14e029bbb08746e6fd952/3:2/w_6000,h_4000,c_limit/barcelonaGettyImages-1386922276.jpeg"
+        }
     },
     {
         cityName: "Seville",
@@ -434,7 +500,10 @@ const cities = [
             December: 13.4,
             Year: 20.3
         },
-        cityPicture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslJ-51RMAQDRUS_UTx74CNW44SXHWHKXiRA&usqp=CAU"
+        cityPicture: {
+            cityName: "seville",
+            pictureLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslJ-51RMAQDRUS_UTx74CNW44SXHWHKXiRA&usqp=CAU"
+        }
     },
     {
         cityName: "Stockholm",
@@ -453,7 +522,10 @@ const cities = [
             December: -0.5,
             Year: 7.7
         },
-        cityPicture: "https://media.timeout.com/images/105171709/image.jpg"
+        cityPicture: {
+            cityName: "stockholm",
+            pictureLink: "https://media.timeout.com/images/105171709/image.jpg"
+        }
     },
     {
         cityName: "Zurich",
@@ -472,7 +544,10 @@ const cities = [
             December: 1.7,
             Year: 8.9
         },
-        cityPicture: "https://lp-cms-production.imgix.net/2021-08/shutterstockRF_314150237.jpg"
+        cityPicture: {
+            cityName: "zurich",
+            pictureLink: "https://lp-cms-production.imgix.net/2021-08/shutterstockRF_314150237.jpg"
+        }
     },
     {
         cityName: "Kyiv",
@@ -491,7 +566,10 @@ const cities = [
             December: -1.7,
             Year: 8.2
         },
-        cityPicture: "https://cdn.britannica.com/18/194818-050-E7A7A993/view-Kiev-Ukraine.jpg"
+        cityPicture: {
+            cityName: "kyiv",
+            pictureLink: "https://cdn.britannica.com/18/194818-050-E7A7A993/view-Kiev-Ukraine.jpg"
+        }
     },
     {
         cityName: "Edinburgh",
@@ -510,7 +588,10 @@ const cities = [
             December: 5.6,
             Year: 9.7
         },
-        cityPicture: "https://a.cdn-hotels.com/gdcs/production73/d1723/35b8f7e3-14c4-4d53-ae2f-5f7f6adb6aac.jpg"
+        cityPicture: {
+            cityName: "edinburgh",
+            pictureLink: "https://a.cdn-hotels.com/gdcs/production73/d1723/35b8f7e3-14c4-4d53-ae2f-5f7f6adb6aac.jpg"
+        }
     },
     {
         cityName: "London",
@@ -529,7 +610,10 @@ const cities = [
             December: 6.2,
             Year: 11.5
         },
-        cityPicture: "https://www.citysparespace.com/wp-content/uploads/2023/02/london.jpeg"
+        cityPicture: {
+            cityName: "london",
+            pictureLink: "https://www.citysparespace.com/wp-content/uploads/2023/02/london.jpeg"
+        }
     }
 ]
 
