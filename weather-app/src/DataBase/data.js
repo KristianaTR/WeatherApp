@@ -1,4 +1,4 @@
-const cities = [
+const Cities = [
     {
         cityName: "Riga",
         averageTemperatureCelsius: {
@@ -533,4 +533,4 @@ const cities = [
     }
 ]
 
-export default cities
+export default Cities
