@@ -1,17 +1,20 @@
 import "./CitiesList.css";
-import cities from "../../DataBase/data.js";
+import Cities from "../../DataBase/data.js";
 import { useState } from "react";
 import Paginator from "../Paginator/Paginator";
+import SearchBar from "../Search/Search1";
 
 const CitiesList = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
-  const totalPages = Math.ceil(cities.length / itemsPerPage);
+  const totalPages = Math.ceil(Cities.length / itemsPerPage);
 
   const showCities = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const displayedCities = cities.slice(startIndex, endIndex);
+    const displayedCities = Cities.slice(startIndex, endIndex);
+
+  
 
     const CitiesListClassNames = (temperature) => {
       let temperatureClass  = ""
@@ -93,6 +96,7 @@ const CitiesList = () => {
   };
 
   return (
+    
     <div className="citiesListTableWrapper">
       <table className="CitiesListTable">
         <thead>
