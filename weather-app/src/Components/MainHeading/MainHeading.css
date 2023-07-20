@@ -1,0 +1,21 @@
+.MainHeadingWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.MainHeadingIcons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.MainHeadingDescription {
+    font-size: 0.9rem;
+    color: #ffc759;
+    height: 1.5rem;
+}
