@@ -14,7 +14,6 @@ const CitiesList = () => {
     const endIndex = startIndex + itemsPerPage;
     const displayedCities = Cities.slice(startIndex, endIndex);
 
-  
 
     const CitiesListClassNames = (temperature) => {
       let temperatureClass  = ""
@@ -52,40 +51,40 @@ const CitiesList = () => {
       <tr key={city.cityName}>
         <td className="CitiesListTableCityColumn">{city.cityName}</td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.January)}`}>
-          {city.averageTemperatureCelsius.January}
+          {city.averageTemperatureCelsius.January} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.February)}`}>
-          {city.averageTemperatureCelsius.February}
+          {city.averageTemperatureCelsius.February} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.March)}`}>
-          {city.averageTemperatureCelsius.March}
+          {city.averageTemperatureCelsius.March} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.April)}`}>
-          {city.averageTemperatureCelsius.April}
+          {city.averageTemperatureCelsius.April} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.May)}`}>
-          {city.averageTemperatureCelsius.May}
+          {city.averageTemperatureCelsius.May} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.June)}`}>
-          {city.averageTemperatureCelsius.June}
+          {city.averageTemperatureCelsius.June} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.July)}`}>
-          {city.averageTemperatureCelsius.July}
+          {city.averageTemperatureCelsius.July} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.August)}`}>
-          {city.averageTemperatureCelsius.August}
+          {city.averageTemperatureCelsius.August} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.September)}`}>
-          {city.averageTemperatureCelsius.September}
+          {city.averageTemperatureCelsius.September} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.October)}`}>
-          {city.averageTemperatureCelsius.October}
+          {city.averageTemperatureCelsius.October} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.November)}`}>
-          {city.averageTemperatureCelsius.November}
+          {city.averageTemperatureCelsius.November} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.December)}`}>
-          {city.averageTemperatureCelsius.December}
+          {city.averageTemperatureCelsius.December} °C
         </td>
       </tr>
     ));
@@ -96,37 +95,37 @@ const CitiesList = () => {
   };
 
   return (
-    
-    <div className="citiesListTableWrapper">
-      <table className="CitiesListTable">
-        <thead>
-          <tr>
-            <th className="CitiesListTableCityColumn"></th>
-            <th className="CitiesListTableMonthColumnsTableHead">JAN</th>
-            <th className="CitiesListTableMonthColumnsTableHead">FEB</th>
-            <th className="CitiesListTableMonthColumnsTableHead">MAR</th>
-            <th className="CitiesListTableMonthColumnsTableHead">APR</th>
-            <th className="CitiesListTableMonthColumnsTableHead">MAY</th>
-            <th className="CitiesListTableMonthColumnsTableHead">JUN</th>
-            <th className="CitiesListTableMonthColumnsTableHead">JUL</th>
-            <th className="CitiesListTableMonthColumnsTableHead">AUG</th>
-            <th className="CitiesListTableMonthColumnsTableHead">SEP</th>
-            <th className="CitiesListTableMonthColumnsTableHead">OCT</th>
-            <th className="CitiesListTableMonthColumnsTableHead">NOV</th>
-            <th className="CitiesListTableMonthColumnsTableHead">DEC</th>
-          </tr>
-        </thead>
-        <tbody>{showCities()}</tbody>
-      </table>
-      <Paginator
-        currentPage={currentPage}
-        totalPages={totalPages}
-        handlePageChange={handlePageChange}
-      />
+    <div className="CitiesList">
+      <div className="citiesListTableWrapper">
+        <table className="CitiesListTable">
+          <thead>
+            <tr>
+              <th className="CitiesListTableCityColumn"></th>
+              <th className="CitiesListTableMonthColumnsTableHead">JAN</th>
+              <th className="CitiesListTableMonthColumnsTableHead">FEB</th>
+              <th className="CitiesListTableMonthColumnsTableHead">MAR</th>
+              <th className="CitiesListTableMonthColumnsTableHead">APR</th>
+              <th className="CitiesListTableMonthColumnsTableHead">MAY</th>
+              <th className="CitiesListTableMonthColumnsTableHead">JUN</th>
+              <th className="CitiesListTableMonthColumnsTableHead">JUL</th>
+              <th className="CitiesListTableMonthColumnsTableHead">AUG</th>
+              <th className="CitiesListTableMonthColumnsTableHead">SEP</th>
+              <th className="CitiesListTableMonthColumnsTableHead">OCT</th>
+              <th className="CitiesListTableMonthColumnsTableHead">NOV</th>
+              <th className="CitiesListTableMonthColumnsTableHead">DEC</th>
+            </tr>
+          </thead>
+          <tbody>{showCities()}</tbody>
+        </table>
+        <Paginator
+          currentPage={currentPage}
+          totalPages={totalPages}
+          handlePageChange={handlePageChange}
+        />
+      </div>
+
     </div>
   );
 };
-
-//TODO place component within page and page within App.tsx
 
 export default CitiesList;
