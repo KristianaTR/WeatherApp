@@ -1,7 +1,7 @@
 import './MainWrapper.css';
 import CitiesList from "../../Components/CitiesList/CitiesList";
 import MainHeading from "../../Components/MainHeading/MainHeading";
-import CityItem from "../../Components/CityItem/CityItem";
+// import CityItem from "../../Components/CityItem/CityItem";
 
 
 const MainWrapper = () => {
@@ -9,7 +9,7 @@ const MainWrapper = () => {
     <div>
         <MainHeading/>
         <CitiesList/>
-        <CityItem/>
+        {/* <CityItem/> */}
     </div>
   )
 }
