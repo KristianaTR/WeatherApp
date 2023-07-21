@@ -1,12 +1,10 @@
-import CitiesList from "../../Components/CitiesList/CitiesList";
-import MainPageStyling from "../../Components/MainPageStyling/MainPageStyling";
 import "./MainPage.css";
+import MainWrapper from "../../Components/MainWrapper/MainWrapper";
 
 const MainPage = () => {
   return (
     <div className="MainPage">
-      <MainPageStyling/>
-      <div className="MainPageCitiesListComponent"><CitiesList/></div>
+      <MainWrapper/>
     </div>
   );
 };
