@@ -216,6 +216,4 @@ const CitiesList = () => {
   );
 };
 
-//TODO place component within page and page within App.tsx
-
 export default CitiesList;

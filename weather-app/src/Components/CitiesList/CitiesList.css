@@ -1,3 +1,9 @@
+.CitiesList {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 .citiesListTableWrapper {
   display: flex;
   flex-direction: column;
@@ -9,18 +15,17 @@
   width: 90%;
   border-collapse: separate;
   border-spacing: 0 1em;
-  background-color: #00008017;
+  background-color: #00008039;
   border-radius: 20px;
   padding: 0 1rem 0 1rem;
 }
 
 .CitiesListTableMonthColumnsTableHead {
   text-align: center;
-  font-family: "Montserrat";
   font-size: 0.9rem;
-  color: #ffc759;
+  color: #AA8300;
   height: 1.5rem;
-  border-bottom: 1px solid #ffc759;
+  border-bottom: 1px solid #AA8300;
   min-width: 37px;
 }
 
@@ -35,7 +40,7 @@
 .CitiesListTableCityColumn {
   font-family: "Montserrat";
   font-size: 0.9rem;
-  color: #1f96c9;
+  color: #11516c;
   width: 130px;
 }
 
