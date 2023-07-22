@@ -2,19 +2,58 @@ const Cities = [
     {
         cityName: "Riga",
         averageTemperatureCelsius: {
-            January: -4.7,
-            February: -4.2,
-            March: 0.5,
-            April: 5.1,
-            May: 11.4,
-            June: 15.5,
-            July: 16.9,
-            August: 16.2,
-            September: 12,
-            October: 7.4,
-            November: 2.1,
-            December: -2.3,
-            Year: 6.2
+            January: {
+                monthName: 'Jan',
+                monthTemp: -4.7
+            },
+            February: {
+                monthName: 'Feb',
+                monthTemp: -4.2
+            },
+            March: {
+                monthName: 'Mar',
+                monthTemp: 0.5
+            },
+            April: {
+                monthName: 'Apr',
+                monthTemp: 5.1
+            },
+            May: {
+                monthName: 'May',
+                monthTemp: 11.4
+            },
+            June: {
+                monthName: 'Jun',
+                monthTemp: 15.5
+            },
+            July: {
+                monthName: 'Jul',
+                monthTemp: 16.9
+            },
+            August: {
+                monthName: 'Aug',
+                monthTemp: 16.2
+            },
+            September: {
+                monthName: 'Sep',
+                monthTemp: 12
+            },
+            October: {
+                monthName: 'Oct',
+                monthTemp: 7.4
+            },
+            November: {
+                monthName: 'Nov',
+                monthTemp: 2.1
+            },
+            December: {
+                monthName: 'Dec',
+                monthTemp: -2.3
+            },
+            Year: {
+                monthName: 'Year',
+                monthTemp: 6.2
+            }
         },
         cityPicture:{
             cityName: "riga",
