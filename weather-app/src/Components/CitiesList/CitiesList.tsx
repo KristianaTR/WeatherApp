@@ -2,7 +2,7 @@ import "./CitiesList.css";
 import Cities from "../../DataBase/data.js";
 import { useState } from "react";
 import Paginator from "../Paginator/Paginator";
-import SearchBar from "../Search/Search1";
+// import SearchBar from "../Search/Search1";
 
 const CitiesList = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,7 +15,7 @@ const CitiesList = () => {
     const displayedCities = Cities.slice(startIndex, endIndex);
 
 
-    const CitiesListClassNames = (temperature) => {
+    const CitiesListClassNames = (temperature: number) => {
       let temperatureClass  = ""
       
       if (temperature <= -20) {
@@ -51,40 +51,40 @@ const CitiesList = () => {
       <tr key={city.cityName}>
         <td className="CitiesListTableCityColumn">{city.cityName}</td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.January)}`}>
-          {city.averageTemperatureCelsius.January} °C
+          {city.averageTemperatureCelsius.January.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.February)}`}>
-          {city.averageTemperatureCelsius.February} °C
+          {city.averageTemperatureCelsius.February.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.March)}`}>
-          {city.averageTemperatureCelsius.March} °C
+          {city.averageTemperatureCelsius.March.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.April)}`}>
-          {city.averageTemperatureCelsius.April} °C
+          {city.averageTemperatureCelsius.April.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.May)}`}>
-          {city.averageTemperatureCelsius.May} °C
+          {city.averageTemperatureCelsius.May.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.June)}`}>
-          {city.averageTemperatureCelsius.June} °C
+          {city.averageTemperatureCelsius.June.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.July)}`}>
-          {city.averageTemperatureCelsius.July} °C
+          {city.averageTemperatureCelsius.July.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.August)}`}>
-          {city.averageTemperatureCelsius.August} °C
+          {city.averageTemperatureCelsius.August.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.September)}`}>
-          {city.averageTemperatureCelsius.September} °C
+          {city.averageTemperatureCelsius.September.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.October)}`}>
-          {city.averageTemperatureCelsius.October} °C
+          {city.averageTemperatureCelsius.October.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.November)}`}>
-          {city.averageTemperatureCelsius.November} °C
+          {city.averageTemperatureCelsius.November.monthTemp} °C
         </td>
         <td className={`CitiesListTableMonthColumns & ${CitiesListClassNames(city.averageTemperatureCelsius.December)}`}>
-          {city.averageTemperatureCelsius.December} °C
+          {city.averageTemperatureCelsius.December.monthTemp} °C
         </td>
       </tr>
     ));
