@@ -44,39 +44,41 @@
   width: 130px;
 }
 
-.color000080 {
+/* styling according to temperatures */
+
+.color-20andMore {
   color: #000080
 }
-.color191970 {
+.color-20to-15 {
   color: #191970
 }
-.color4169E1 {
+.color-15to-10 {
   color: #4169E1
 }
-.color87CEEB {
-  color: #87CEEB
+.color-10to-5 {
+  color: #489fc2
 }
-.colorF0F8FF {
-  color: #F0F8FF
+.color-5to0 {
+  color: #70a8da
 }
-.colorwhite {
+.color0to5 {
   color: white
 }
-.colorFFC0CB {
-  color: #FFC0CB
+.color5to10 {
+  color: #d48c98
 }
-.colorFF2400 {
+.color10to15 {
   color: #FF2400
 }
-.colorDC143C {
-  color: #DC143C
+.color15to20 {
+  color: #c51337
 }
-.color800020 {
+.color20to25 {
   color: #800020
 }
-.color800000 {
+.color25to30 {
   color: #800000
 }
-.color8B0000 {
+.color30plus {
   color: #8B0000
 }
