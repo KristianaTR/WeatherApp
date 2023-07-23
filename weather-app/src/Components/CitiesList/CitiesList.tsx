@@ -3,7 +3,7 @@ import Cities from "../../DataBase/data.js";
 import { useState } from "react";
 import Paginator from "../Paginator/Paginator";
 import "../../Components/Search/Search.css";
-// import SearchBar from "../Search/Search1";
+
 
 const CitiesList = () => {
 
@@ -43,10 +43,6 @@ console.log(filterSearch);
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const displayedCities = Cities.slice(startIndex, endIndex);
-
-    
-    
-    
 
     //-----------Adding different styling according to level of temperature---------------
     const CitiesListClassNames = (temperature: number) => {
@@ -231,6 +227,7 @@ console.log(filterSearch);
   return (
     <div>
       {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
+
       {/* < SearchBar placeholder="Search.." data={Cities}/> */}
 
 
@@ -247,7 +244,6 @@ console.log(filterSearch);
 
         </div> */}
         
-
       <div className="citiesListTableWrapper"> 
         <table className="CitiesListTable">
           <thead>{displayedMonthNames()}</thead>
