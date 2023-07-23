@@ -1,7 +1,7 @@
 const Cities = [
     {
         cityName: "Riga",
-        averageTemperatureCelsius: {
+        averageTemperatureCelsius: { 
             january: { monthName: "JAN", tempCelsius: -4.7 },
             february: { monthName: "FEB", tempCelsius: -4.2 },
             march: { monthName: "MAR", tempCelsius: 0.5 },
@@ -14,7 +14,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 7.4 },
             november: { monthName: "NOV", tempCelsius: 2.1 },
             december: { monthName: "DEC", tempCelsius: -2.3 },
-            year: 6.2,
         },
         cityPicture: {
             cityName: "riga",
@@ -37,7 +36,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 6.6 },
             november: { monthName: "NOV", tempCelsius: 1.2 },
             december: { monthName: "DEC", tempCelsius: -2.9 },
-            year: 6.0,
         },
         cityPicture: {
             cityName: "vilnius",
@@ -60,7 +58,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 6.5 },
             november: { monthName: "NOV", tempCelsius: 2.0 },
             december: { monthName: "DEC", tempCelsius: -0.9 },
-            year: 6.4,
         },
         cityPicture: {
             cityName: "tallin",
@@ -82,7 +79,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 16.0 },
             november: { monthName: "NOV", tempCelsius: 11.7 },
             december: { monthName: "DEC", tempCelsius: 8.1 },
-            year: 15.2,
         },
         cityPicture: {
             cityName: "tirana",
@@ -104,7 +100,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 10.3 },
             november: { monthName: "NOV", tempCelsius: 5.7 },
             december: { monthName: "DEC", tempCelsius: 3.0 },
-            year: 9.8,
         },
         cityPicture: {
             cityName: "andorra la Vella",
@@ -126,7 +121,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 10.2 },
             november: { monthName: "NOV", tempCelsius: 5.1 },
             december: { monthName: "DEC", tempCelsius: 1.1 },
-            year: 10.4,
         },
         cityPicture: {
             cityName: "vienna",
@@ -148,7 +142,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 11.1 },
             november: { monthName: "NOV", tempCelsius: 6.8 },
             december: { monthName: "DEC", tempCelsius: 3.9 },
-            year: 10.5,
         },
         cityPicture: {
             cityName: "brussels",
@@ -170,7 +163,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 11.1 },
             november: { monthName: "NOV", tempCelsius: 6.8 },
             december: { monthName: "DEC", tempCelsius: 3.9 },
-            year: 10.5,
         },
         cityPicture: {
             cityName: "split",
@@ -192,7 +184,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 11.0 },
             november: { monthName: "NOV", tempCelsius: 6.6 },
             december: { monthName: "DEC", tempCelsius: 4.1 },
-            year: 10.7,
         },
         cityPicture: {
             cityName: "amsterdam",
@@ -214,7 +205,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 19.0 },
             november: { monthName: "NOV", tempCelsius: 14.6 },
             december: { monthName: "DEC", tempCelsius: 11.4 },
-            year: 18.1,
         },
         cityPicture: {
             cityName: "athens",
@@ -236,7 +226,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 9.7 },
             november: { monthName: "NOV", tempCelsius: 4.6 },
             december: { monthName: "DEC", tempCelsius: 1.3 },
-            year: 9.3,
         },
         cityPicture: {
             cityName: "berlin",
@@ -258,7 +247,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 11.2 },
             november: { monthName: "NOV", tempCelsius: 5.2 },
             december: { monthName: "DEC", tempCelsius: 1.0 },
-            year: 10.8,
         },
         cityPicture: {
             cityName: "budapest",
@@ -280,7 +268,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 12.0 },
             november: { monthName: "NOV", tempCelsius: 9.0 },
             december: { monthName: "DEC", tempCelsius: 7.4 },
-            year: 11.3,
         },
         cityPicture: {
             cityName: "dublin",
@@ -302,7 +289,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 5.0 },
             november: { monthName: "NOV", tempCelsius: 0.2 },
             december: { monthName: "DEC", tempCelsius: -4.1 },
-            year: 4.2,
         },
         cityPicture: {
             cityName: "helsinki",
@@ -324,7 +310,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 14.1 },
             november: { monthName: "NOV", tempCelsius: 8.2 },
             december: { monthName: "DEC", tempCelsius: 4.3 },
-            year: 13.2,
         },
         cityPicture: {
             cityName: "milan",
@@ -346,7 +331,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 16.5 },
             november: { monthName: "NOV", tempCelsius: 11.5 },
             december: { monthName: "DEC", tempCelsius: 8.4 },
-            year: 15.8,
         },
         cityPicture: {
             cityName: "rome",
@@ -368,7 +352,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 18.1 },
             november: { monthName: "NOV", tempCelsius: 13.5 },
             december: { monthName: "DEC", tempCelsius: 10.3 },
-            year: 16.7,
         },
         cityPicture: {
             cityName: "napoli",
@@ -390,7 +373,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 9.8 },
             november: { monthName: "NOV", tempCelsius: 4.8 },
             december: { monthName: "DEC", tempCelsius: 2.0 },
-            year: 9.1,
         },
         cityPicture: {
             cityName: "luxembourg city",
@@ -412,7 +394,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 12.3 },
             november: { monthName: "NOV", tempCelsius: 6.2 },
             december: { monthName: "DEC", tempCelsius: 0.6 },
-            year: 11.8,
         },
         cityPicture: {
             cityName: "bucharest",
@@ -434,7 +415,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 9.6 },
             november: { monthName: "NOV", tempCelsius: 4.2 },
             december: { monthName: "DEC", tempCelsius: -0.6 },
-            year: 8.9,
         },
         cityPicture: {
             cityName: "bratislava",
@@ -456,7 +436,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 20.0 },
             november: { monthName: "NOV", tempCelsius: 15.7 },
             december: { monthName: "DEC", tempCelsius: 13.2 },
-            year: 18.9,
         },
         cityPicture: {
             cityName: "barcelona",
@@ -479,7 +458,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 21.3 },
             november: { monthName: "NOV", tempCelsius: 16.6 },
             december: { monthName: "DEC", tempCelsius: 13.4 },
-            year: 20.3,
         },
         cityPicture: {
             cityName: "seville",
@@ -502,7 +480,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 8.2 },
             november: { monthName: "NOV", tempCelsius: 3.5 },
             december: { monthName: "DEC", tempCelsius: -0.5 },
-            year: 7.7,
         },
         cityPicture: {
             cityName: "stockholm",
@@ -524,7 +501,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 9.5 },
             november: { monthName: "NOV", tempCelsius: 4.6 },
             december: { monthName: "DEC", tempCelsius: 1.7 },
-            year: 8.9,
         },
         cityPicture: {
             cityName: "zurich",
@@ -546,7 +522,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 8.8 },
             november: { monthName: "NOV", tempCelsius: 3.1 },
             december: { monthName: "DEC", tempCelsius: -1.7 },
-            year: 8.2,
         },
         cityPicture: {
             cityName: "kyiv",
@@ -568,7 +543,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 10.1 },
             november: { monthName: "NOV", tempCelsius: 7.2 },
             december: { monthName: "DEC", tempCelsius: 5.6 },
-            year: 9.7,
         },
         cityPicture: {
             cityName: "edinburgh",
@@ -590,7 +564,6 @@ const Cities = [
             october: { monthName: "OCT", tempCelsius: 11.9 },
             november: { monthName: "NOV", tempCelsius: 8.4 },
             december: { monthName: "DEC", tempCelsius: 6.2 },
-            year: 11.5,
         },
         cityPicture: {
             cityName: "london",
