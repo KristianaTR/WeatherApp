@@ -3,7 +3,7 @@ import Cities from "../../DataBase/data.js";
 import { useState } from "react";
 import Paginator from "../Paginator/Paginator";
 import "../../Components/Search/Search.css";
-// import SearchBar from "../Search/Search";
+
 
 const CitiesList = () => {
 
@@ -15,10 +15,9 @@ const CitiesList = () => {
   
   const filterBySearch = (e) => {
       setFilterSearch(e.target.value);
-console.log(filterSearch);
+      console.log(filterSearch);
 
-    
-  };
+    };
 
   const handleEnter = () => {
       const filtered = cities.filter(c => c.cityName.toLowerCase().includes(filterSearch.toLowerCase()));
@@ -37,15 +36,10 @@ const clearInput = () => {
   const totalPages = Math.ceil(Cities.length / itemsPerPage);
 
   
-
   const showCities = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const displayedCities = Cities.slice(startIndex, endIndex);
-
-    
-    
-    
 
     //-----------Adding different styling according to level of temperature---------------
     const CitiesListClassNames = (temperature: number) => {
@@ -229,26 +223,6 @@ const clearInput = () => {
 
   return (
     <div>
-      {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
-      {/* < SearchBar placeholder="Search.." data={Cities}/> */}
-
-
-      <div className="search">
-            <input type="text" className="form-control" value={filterSearch} onChange={filterBySearch}  placeholder="Search..." />
-            <button onClick ={handleEnter}>Search</button>
-            {filterSearch !== "" && <button onClick={clearInput} >Reset</button>}
-        </div>
-
-        <div>
-        {cities.map(i =>
-                <div key={i.cityName}>
-                    {i.cityName}
-                </div>
-            )};
-
-        </div>
-        
-
       <div className="citiesListTableWrapper"> 
         <table className="CitiesListTable">
           <thead>{displayedMonthNames()}</thead>

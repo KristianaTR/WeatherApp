@@ -1,55 +1,99 @@
 import "./Search.css";
-import SearchIcon from '@mui/icons-material/Search';
-import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
+import Cities from "../../DataBase/data.js";
+import CityItemCard from "../CityItemCard/CityItemCard";
+import CitiesList from "../CitiesList/CitiesList";
+import RealWeatherAPI from "../RealWeatherAPI/RealWeatherAPI";
+
+const Search = () => {
+  const [cities, setCities] = useState(Cities);
+
+  const [filterSearch, setFilterSearch] = useState("");
+
+  const [showDropdown, setShowDropdown] = useState(true);
+
+  const filterBySearch = (event) => {
+    setFilterSearch(event.target.value);
+  }
+
+  const handleEnter = () => {
+    const filtered = cities.filter(city => city.cityName.toLowerCase().includes(filterSearch.toLowerCase()));
+    setCities(filtered);
+    setShowDropdown(false);
+  }
 
 
-const SearchBar = ({placeholder, data}) => {
-  
-  const [filteredData, setFilteredData] = useState([]);
-  const [wordEntered, setWordEntered] = useState("");
-
-  const handleFilter = (event) => {
-    const searchWord = event.target.value
-    setWordEntered(searchWord)
-    const newFilter = data.filter((value) => {
-      return value.cityName.toLowerCase().includes(searchWord.toLowerCase());
-    });
-
-    if (searchWord === "") {
-      setFilteredData([]);
-    }else {
-      setFilteredData(newFilter);
+    const clearInput = () => {
+      setCities(Cities);
+      setFilterSearch("");
+      setShowDropdown(true);
     }
     
-    ;
-  }
-  const clearInput = () => {
-      setFilteredData([]);
-      setWordEntered("");
-    }
+    const handleCityClick = (cityName) => {
+      setFilterSearch(cityName);
+      setShowDropdown(false);
+    };
+    
+
 
   return (
-    <div className="search">
-      <h1>Check the weather!</h1>
-      <h3>Because the weather changes, but Your plans don't have to</h3>
-      <div className="searchInputs">
-        <input type="text" placeholder={placeholder} value={wordEntered} onChange={handleFilter}/>
-        <div className="searchIcon">
-          {filteredData.length === 0 ? (<SearchIcon />) : (<CloseIcon id="clearBtn" onClick= {clearInput}/>)}
+    <div className="SearchWrapper">
+      <div className="search">
+      <div>
+          <input type="text" className="search-inner" value={filterSearch} onChange={filterBySearch}  placeholder="Search..." />
+            <button className="enter-btn" onClick ={handleEnter}>Search</button>
+            {filterSearch !== "" && <button className="reset-btn" onClick={clearInput} >Reset</button>}
         </div>
+        {showDropdown && (<div className="dropdown">
+              {Cities.filter(city => {
+                const searchTerm = filterSearch.toLowerCase();
+                const cityName = city.cityName.toLowerCase();
+
+                return searchTerm && cityName.startsWith(searchTerm) 
+              })
+              .map((city) => <div key={city.cityName} className="dropdown-row" onClick={() => handleCityClick(city.cityName)}>{city.cityName}</div>)}
+            </div> )}
+
       </div>
-      {filteredData.length !== 0 && (
-        <div className="dataResult">
-        {filteredData.map((value) => {
-          return (
-          <div className="dataItem" key={value.cityName}> {value.cityName} </div>
-          );
-        })}
+
+      {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
+      <div className="toggleComponentVisibility">
+        {filterSearch === "" ? (
+          <CitiesList />
+        ) : (
+          <div>
+            <RealWeatherAPI />
+            <div className="cityItemWrapper">
+              {/* <CityItem/> or CityItem return statement goes here*/}
+
+              {/* CityItem component --> */}
+
+              {cities.map((i) => {
+                const FilteredData = Object.values(i.averageTemperatureCelsius);
+                console.log(i.averageTemperatureCelsius);
+
+                return (
+                  <div key={i.cityName} className="CityItem">
+                    <div className="CityItemCityName">{i.cityName}</div>
+                    <div className="CityItemCardWrapper">
+                      {FilteredData.map((data) => (
+                        <CityItemCard
+                          month={data.monthName}
+                          tempCelsius={data.tempCelsius}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* <-- CityItem component */}
+            </div>
+          </div>
+        )}
       </div>
-      )}
     </div>
   );
 };
-  
-  export default SearchBar;
+
+export default Search;

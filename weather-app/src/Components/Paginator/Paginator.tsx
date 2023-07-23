@@ -1,30 +1,37 @@
 import "./Paginator.css";
 
 const Paginator = ({ currentPage, totalPages, handlePageChange }) => {
+
+  //switches to previous page
   const handlePreviousPage = () => {
     handlePageChange(currentPage - 1);
   };
+  //-------------
 
+  //switches to next page
   const handleNextPage = () => {
     handlePageChange(currentPage + 1);
   };
+  //-------------
 
+  //shows page numbers and on click calls handelPageChange function, which switches the page witch is shown
   const showPaginator = () => {
     const pageNumbers = [];
 
-    for (let i = 1; i <= totalPages; i++) {
+    for (let number = 1; number <= totalPages; number++) {
       pageNumbers.push(
         <li
-          key={i}
-          className={i === currentPage ? "active" : ""}
-          onClick={() => handlePageChange(i)}
+          key={number}
+          onClick={() => handlePageChange(number)}
         >
-          {i}
+          {number}
         </li>
       );
     }
     return pageNumbers;
   };
+  //-------------
+
   return (
     <div className="PaginatorWrapper">
       <ul className="Paginator">

@@ -1,0 +1,46 @@
+.CityItem {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #00008039;
+    border-radius: 20px;
+    padding: 0.5rem;
+    margin: 2rem auto;
+}
+
+
+.CityItemCityName {
+    font-size: 0.9rem;
+    width: fit-content;
+}
+
+.CityItemCardWrapper {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .CityItemCard {
+    background-color: #00008039;
+    border-radius: 20px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+}
+
+.CityItemCardMonth {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    height: 1.5rem
+}
+
+.CityItemCardIcon {
+    margin: 10px 0;
+} */
