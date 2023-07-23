@@ -1,0 +1,21 @@
+.RealWeatherAPIWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.RealWeatherAPIHeading {
+    font-size: 15px;
+    color: rgb(121, 94, 19);
+    margin: 0;
+}
+
+.RealWeatherAPITemp {
+    font-size: 20px;
+    margin: 0.5rem;
+    font-weight: 900;
+    background-color: rgba(19, 46, 121, 0.548);
+    padding: 0.5rem 1rem;
+    color: aliceblue;
+    border-radius: 5px;
+}
