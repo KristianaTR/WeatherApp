@@ -4,12 +4,13 @@ import { useState } from "react";
 import "../../Components/Search/Search.css";
 import CitiesList from "../CitiesList/CitiesList";
 import RealWeatherAPI from "../RealWeatherAPI/RealWeatherAPI";
+import CityItemCard from "../CityItem/CityItemCard"
 
 const Search = () => {
   // SEARCH----------------
   const [cities, setCities] = useState(Cities);
   const [filterSearch, setFilterSearch] = useState("");
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchQuery, setSearchQuery] = useState("");
   const filterBySearch = (e) => {
     setFilterSearch(e.target.value);
     console.log(filterSearch);
@@ -17,17 +18,15 @@ const Search = () => {
 
   const handleEnter = (e) => {
     if (e.key === "Enter") {
-      
-      
       const filtered = cities.filter((c) =>
         c.cityName.toLowerCase().includes(filterSearch)
       );
       setCities(filtered);
       // added this
-      setSearchQuery(filterSearch)
+      setSearchQuery(filterSearch);
       // added this
-      setFilterSearch('')
-      console.log(searchQuery)
+      setFilterSearch("");
+      console.log(searchQuery);
     }
 
     if (e.key === "Delete") {
@@ -68,8 +67,33 @@ const Search = () => {
           <CitiesList />
         ) : (
           <div>
-          <RealWeatherAPI/>
-          <div className="cityItemWrapper">{/* <CityItem/> or CityItem return statement goes here*/}</div>
+            <RealWeatherAPI />
+            <div className="cityItemWrapper">
+              {/* <CityItem/> or CityItem return statement goes here*/}
+
+              {/* CityItem component --> */}
+
+              {cities.map((i) => {
+                const FilteredData = Object.values(i.averageTemperatureCelsius);
+                console.log(i.averageTemperatureCelsius);
+
+                return (
+                  <div key={i.cityName} className="CityItem">
+                    <div className="CityItemCityName">{i.cityName}</div>
+                    <div className="CityItemCardWrapper">
+                      {FilteredData.map((data) => (
+                        <CityItemCard
+                          month={data.monthName}
+                          tempCelsius={data.tempCelsius}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* <-- CityItem component */}
+            </div>
           </div>
         )}
       </div>
