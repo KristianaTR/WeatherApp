@@ -1,81 +1,89 @@
-import './Search.css';
-import '../CityItem/CityItem.css';
+import "./Search.css";
 import { useState } from "react";
-import  Cities from "../../DataBase/data.js";
+import Cities from "../../DataBase/data.js";
 import CityItemCard from "../CityItemCard/CityItemCard";
-// import Paginator from "../Paginator/Paginator";
-// import SearchBar from "../Search/Search1";
-
-
+import CitiesList from "../CitiesList/CitiesList";
+import RealWeatherAPI from "../RealWeatherAPI/RealWeatherAPI";
 
 const Search = () => {
-
   const [cities, setCities] = useState(Cities);
-    
-    // SEARCH----------------
-    
-    const [filterSearch, setFilterSearch] = useState("");
-    const filterBySearch = (e) => {
-      setFilterSearch(e.target.value);
-      console.log(filterSearch);
-    };
 
-    const handleEnter = (e) => {
-      if (e.key === "Enter") {
-        const filtered = cities.filter(c => c.cityName.toLowerCase().includes(filterSearch));
-        console.log(filtered);
-        setCities(filtered);
-      }
+  // SEARCH----------------
 
-      if (e.key === "Delete") {
-        setCities(Cities);
-        setFilterSearch("")
-        console.log("delete")
-      }
-  }
-    // SEARCH------------------
-    
+  const [filterSearch, setFilterSearch] = useState("");
+  const filterBySearch = (e) => {
+    setFilterSearch(e.target.value);
+    console.log(filterSearch);
+  };
+
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
+      const filtered = cities.filter((c) =>
+        c.cityName.toLowerCase().includes(filterSearch)
+      );
+      console.log(filtered);
+      setCities(filtered);
+    }
+
+    if (e.key === "Delete") {
+      setCities(Cities);
+      setFilterSearch("");
+      console.log("delete");
+    }
+  };
+  // SEARCH------------------
 
   return (
-    <div className='SearchWrapper'>
-        <div className="SearchInput">
-          <input 
-            type="text" 
-            className="form-control" 
-            value={filterSearch} 
-            onChange={filterBySearch} 
-            onKeyUp ={handleEnter} 
-            placeholder="Search..." 
-          />
-        </div>
+    <div className="SearchWrapper">
+      <div className="SearchInput">
+        <input
+          type="text"
+          className="form-control"
+          value={filterSearch}
+          onChange={filterBySearch}
+          onKeyUp={handleEnter}
+          placeholder="Search..."
+        />
+      </div>
 
-        {/* CityItem component --> */}
+      {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
+      <div className="toggleComponentVisibility">
+        {filterSearch === "" ? (
+          <CitiesList />
+        ) : (
+          <div>
+            <RealWeatherAPI />
+            <div className="cityItemWrapper">
+              {/* <CityItem/> or CityItem return statement goes here*/}
 
-        {cities.map((i) => {
-          const FilteredData = Object.values(i.averageTemperatureCelsius);
-          console.log(i.averageTemperatureCelsius);
+              {/* CityItem component --> */}
 
-          return (
-            <div key={i.cityName} className="CityItem">
-              <div className="CityItemCityName">{i.cityName}</div>
-              <div className="CityItemCardWrapper">
-                {FilteredData.map((data) => (
-                  <CityItemCard 
-                    month={data.monthName}  
-                    tempCelsius={data.tempCelsius}
-                  />
-                ))}
-              </div>
+              {cities.map((i) => {
+                const FilteredData = Object.values(i.averageTemperatureCelsius);
+                console.log(i.averageTemperatureCelsius);
+
+                return (
+                  <div key={i.cityName} className="CityItem">
+                    <div className="CityItemCityName">{i.cityName}</div>
+                    <div className="CityItemCardWrapper">
+                      {FilteredData.map((data) => (
+                        <CityItemCard
+                          month={data.monthName}
+                          tempCelsius={data.tempCelsius}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* <-- CityItem component */}
             </div>
-          );
-        })}
-
-        
-        {/* <-- CityItem component */}
-
+          </div>
+        )}
+      </div>
     </div>
   );
-  
 };
 
 export default Search;

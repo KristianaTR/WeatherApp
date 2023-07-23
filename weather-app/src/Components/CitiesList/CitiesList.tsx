@@ -37,7 +37,6 @@ const CitiesList = () => {
   const totalPages = Math.ceil(Cities.length / itemsPerPage);
 
   
-
   const showCities = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -225,24 +224,6 @@ const CitiesList = () => {
 
   return (
     <div>
-      {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
-
-      {/* < SearchBar placeholder="Search.." data={Cities}/> */}
-
-
-      <div className="search">
-            <input type="text" className="form-control" value={filterSearch} onChange={filterBySearch} onKeyUp ={handleEnter} placeholder="Search..." />
-        </div>
-
-        {/* <div>
-        {cities.map(i =>
-                <div key={i.cityName}>
-                    {i.cityName}
-                </div>
-            )};
-
-        </div> */}
-        
       <div className="citiesListTableWrapper"> 
         <table className="CitiesListTable">
           <thead>{displayedMonthNames()}</thead>
