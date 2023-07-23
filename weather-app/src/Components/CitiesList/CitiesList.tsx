@@ -3,14 +3,16 @@ import Cities from "../../DataBase/data.js";
 import { useState } from "react";
 import Paginator from "../Paginator/Paginator";
 import "../../Components/Search/Search.css";
-// import SearchBar from "../Search/Search1";
+// import SearchBar from "../Search/Search";
 
 const CitiesList = () => {
 
   
   // SEARCH----------------
-  const [cities, setCities] = useState(Cities); 
+  const [cities, setCities] = useState(Cities);
+
   const [filterSearch, setFilterSearch] = useState("");
+  
   const filterBySearch = (e) => {
       setFilterSearch(e.target.value);
 console.log(filterSearch);
@@ -18,17 +20,14 @@ console.log(filterSearch);
     
   };
 
-  const handleEnter = (e) => {
-    if (e.key === "Enter") {
-      const filtered = cities.filter(c => c.cityName.toLowerCase().includes(filterSearch));
+  const handleEnter = () => {
+      const filtered = cities.filter(c => c.cityName.toLowerCase().includes(filterSearch.toLowerCase()));
       setCities(filtered);
-    }
+}
 
-    if (e.key === "Delete") {
-      setCities(Cities);
-      setFilterSearch("")
-      console.log("delete")
-    }
+const clearInput = () => {
+  setCities(Cities);
+  setFilterSearch("");
 }
   // SEARCH------------------
 
@@ -235,17 +234,19 @@ console.log(filterSearch);
 
 
       <div className="search">
-            <input type="text" className="form-control" value={filterSearch} onChange={filterBySearch} onKeyUp ={handleEnter} placeholder="Search..." />
+            <input type="text" className="form-control" value={filterSearch} onChange={filterBySearch}  placeholder="Search..." />
+            <button onClick ={handleEnter}>Search</button>
+            {filterSearch !== "" && <button onClick={clearInput} >Reset</button>}
         </div>
 
-        {/* <div>
+        <div>
         {cities.map(i =>
                 <div key={i.cityName}>
                     {i.cityName}
                 </div>
             )};
 
-        </div> */}
+        </div>
         
 
       <div className="citiesListTableWrapper"> 
