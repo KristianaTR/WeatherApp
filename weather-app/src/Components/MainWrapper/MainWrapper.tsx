@@ -1,14 +1,14 @@
 import './MainWrapper.css';
-import CitiesList from "../../Components/CitiesList/CitiesList";
 import MainHeading from "../../Components/MainHeading/MainHeading";
+import Search from "../../Components/Search/Search";
 // import CityItem from "../../Components/CityItem/CityItem";
 
 
 const MainWrapper = () => {
   return (
-    <div>
+    <div className='MainWrapper'>
         <MainHeading/>
-        <CitiesList/>
+        <Search/>
         {/* <CityItem/> */}
     </div>
   )
