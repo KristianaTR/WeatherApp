@@ -1,110 +1,84 @@
-* {
-    box-sizing: border-box;
-    font-family: "Montserrat";
+.CitiesList {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
-/* .mapCities {
-  
-} */
-
-.search {
-    height: 10vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.citiesListTableWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.search input {
-    background-color: white;
-    border:0;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    height: 2rem;
-    width: 15rem;
+.CitiesListTable {
+  width: 90%;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  background-color: #00008039;
+  border-radius: 20px;
+  padding: 0 1rem 0 1rem;
 }
 
-.searchIcon {
-    height: 1rem;
-    width: 2rem;
-    background-color: white;
-    display: grid;
-    place-items: center;
-}
-input:focus{
-    outline: none;
+.CitiesListTableMonthColumnsTableHead {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #AA8300;
+  height: 1.5rem;
+  border-bottom: 1px solid #AA8300;
+  min-width: 37px;
 }
 
-.searchIcon svg {
-    font-size: 2rem;
+.CitiesListTableMonthColumns {
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #c99a3e;
 }
 
-.searchInputs {
-    margin-top: 105px;
-    display: flex;
-  }
-  
-  .search input {
-    background-color: white;
-    border: 0;
-    border-radius: 2px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    font-size: 18px;
-    padding: 15px;
-    height: 30px;
-    width: 300px;
-  }
-  
-  .searchIcon {
-    height: 60px;
-    width: 50px;
-    background-color: white;
-    display: grid;
-    place-items: center;
-  }
-  
-  input:focus {
-    outline: none;
-  }
-  .searchIcon svg {
-    font-size: 35px;
-  }
-  
-  .dataResult {
-    margin-top: 5px;
-    width: 300px;
-    height: 200px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    overflow: hidden;
-    overflow-y: auto;
-  }
-  
-  .dataResult::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .dataResult .dataItem {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    color: black;
-  }
-  
-  .dataItem p {
-    margin-left: 10px;
-  }
-  a {
-    text-decoration: none;
-  }
-  
-  a:hover {
-    background-color: lightgrey;
-  }
-  
-  #clearBtn {
-    cursor: pointer;
-  }
+.CitiesListTableCityColumn {
+  font-family: "Montserrat";
+  font-size: 0.9rem;
+  color: #11516c;
+  width: 130px;
+}
+
+/* styling according to temperatures */
+
+.color-20andMore {
+  color: #000080
+}
+.color-20to-15 {
+  color: #191970
+}
+.color-15to-10 {
+  color: #4169E1
+}
+.color-10to-5 {
+  color: #489fc2
+}
+.color-5to0 {
+  color: #70a8da
+}
+.color0to5 {
+  color: white
+}
+.color5to10 {
+  color: #d48c98
+}
+.color10to15 {
+  color: #FF2400
+}
+.color15to20 {
+  color: #c51337
+}
+.color20to25 {
+  color: #800020
+}
+.color25to30 {
+  color: #800000
+}
+.color30plus {
+  color: #8B0000
+}
