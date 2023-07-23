@@ -3,11 +3,13 @@ import Cities from "../../DataBase/data.js";
 import { useState } from "react";
 import "../../Components/Search/Search.css";
 import CitiesList from "../CitiesList/CitiesList";
+import RealWeatherAPI from "../RealWeatherAPI/RealWeatherAPI";
 
 const Search = () => {
   // SEARCH----------------
   const [cities, setCities] = useState(Cities);
   const [filterSearch, setFilterSearch] = useState("");
+  const [searchQuery, setSearchQuery] = useState('')
   const filterBySearch = (e) => {
     setFilterSearch(e.target.value);
     console.log(filterSearch);
@@ -15,10 +17,17 @@ const Search = () => {
 
   const handleEnter = (e) => {
     if (e.key === "Enter") {
+      
+      
       const filtered = cities.filter((c) =>
         c.cityName.toLowerCase().includes(filterSearch)
       );
       setCities(filtered);
+      // added this
+      setSearchQuery(filterSearch)
+      // added this
+      setFilterSearch('')
+      console.log(searchQuery)
     }
 
     if (e.key === "Delete") {
@@ -28,8 +37,6 @@ const Search = () => {
     }
   };
   // SEARCH------------------
-
-  
 
   return (
     <div>
@@ -60,7 +67,10 @@ const Search = () => {
         {filterSearch === "" ? (
           <CitiesList />
         ) : (
-          <div className="cityItemWrapper">{/* <CityItem/> */}</div>
+          <div>
+          <RealWeatherAPI/>
+          <div className="cityItemWrapper">{/* <CityItem/> or CityItem return statement goes here*/}</div>
+          </div>
         )}
       </div>
     </div>
