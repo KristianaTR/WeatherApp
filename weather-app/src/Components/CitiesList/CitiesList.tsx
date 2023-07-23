@@ -13,10 +13,9 @@ const CitiesList = () => {
   const [filterSearch, setFilterSearch] = useState("");
   const filterBySearch = (e) => {
       setFilterSearch(e.target.value);
-console.log(filterSearch);
+      console.log(filterSearch);
 
-    
-  };
+    };
 
   const handleEnter = (e) => {
     if (e.key === "Enter") {
