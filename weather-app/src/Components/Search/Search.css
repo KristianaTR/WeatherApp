@@ -3,15 +3,19 @@
     font-family: "Montserrat";
 }
 
+/* .mapCities {
+  
+} */
+
 .search {
-    height: 50vh;
-    width: 70vw;
+    height: 10vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-/* 
+
 .search input {
     background-color: white;
     border:0;
@@ -34,7 +38,7 @@ input:focus{
 
 .searchIcon svg {
     font-size: 2rem;
-} */
+}
 
 .searchInputs {
     margin-top: 105px;
