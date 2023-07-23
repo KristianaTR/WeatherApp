@@ -9,25 +9,24 @@ const CitiesList = () => {
 
   
   // SEARCH----------------
-  const [cities, setCities] = useState(Cities); 
+  const [cities, setCities] = useState(Cities);
+
   const [filterSearch, setFilterSearch] = useState("");
+  
   const filterBySearch = (e) => {
       setFilterSearch(e.target.value);
       console.log(filterSearch);
 
     };
 
-  const handleEnter = (e) => {
-    if (e.key === "Enter") {
-      const filtered = cities.filter(c => c.cityName.toLowerCase().includes(filterSearch));
+  const handleEnter = () => {
+      const filtered = cities.filter(c => c.cityName.toLowerCase().includes(filterSearch.toLowerCase()));
       setCities(filtered);
-    }
+}
 
-    if (e.key === "Delete") {
-      setCities(Cities);
-      setFilterSearch("")
-      console.log("delete")
-    }
+const clearInput = () => {
+  setCities(Cities);
+  setFilterSearch("");
 }
   // SEARCH------------------
 

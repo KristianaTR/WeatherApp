@@ -8,42 +8,52 @@ import RealWeatherAPI from "../RealWeatherAPI/RealWeatherAPI";
 const Search = () => {
   const [cities, setCities] = useState(Cities);
 
-  // SEARCH----------------
-
   const [filterSearch, setFilterSearch] = useState("");
-  const filterBySearch = (e) => {
-    setFilterSearch(e.target.value);
-    console.log(filterSearch);
-  };
 
-  const handleEnter = (e) => {
-    if (e.key === "Enter") {
-      const filtered = cities.filter((c) =>
-        c.cityName.toLowerCase().includes(filterSearch)
-      );
-      console.log(filtered);
-      setCities(filtered);
-    }
+  const [showDropdown, setShowDropdown] = useState(true);
 
-    if (e.key === "Delete") {
+  const filterBySearch = (event) => {
+    setFilterSearch(event.target.value);
+  }
+
+  const handleEnter = () => {
+    const filtered = cities.filter(city => city.cityName.toLowerCase().includes(filterSearch.toLowerCase()));
+    setCities(filtered);
+    setShowDropdown(false);
+  }
+
+
+    const clearInput = () => {
       setCities(Cities);
       setFilterSearch("");
-      console.log("delete");
+      setShowDropdown(true);
     }
-  };
-  // SEARCH------------------
+    
+    const handleCityClick = (cityName) => {
+      setFilterSearch(cityName);
+      setShowDropdown(false);
+    };
+    
+
 
   return (
     <div className="SearchWrapper">
-      <div className="SearchInput">
-        <input
-          type="text"
-          className="form-control"
-          value={filterSearch}
-          onChange={filterBySearch}
-          onKeyUp={handleEnter}
-          placeholder="Search..."
-        />
+      <div className="search">
+      <div>
+          <input type="text" className="search-inner" value={filterSearch} onChange={filterBySearch}  placeholder="Search..." />
+            <button className="enter-btn" onClick ={handleEnter}>Search</button>
+            {filterSearch !== "" && <button className="reset-btn" onClick={clearInput} >Reset</button>}
+        </div>
+        {showDropdown && (<div className="dropdown">
+              {Cities.filter(city => {
+                const searchTerm = filterSearch.toLowerCase();
+                const cityName = city.cityName.toLowerCase();
+
+                return searchTerm && cityName.startsWith(searchTerm) 
+              })
+              .map((city) => <div key={city.cityName} className="dropdown-row" onClick={() => handleCityClick(city.cityName)}>{city.cityName}</div>)}
+            </div> )}
+
       </div>
 
       {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
