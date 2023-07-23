@@ -1,16 +1,16 @@
 import "./Search.css";
-import Cities from "../../DataBase/data.js";
 import { useState } from "react";
-import "../../Components/Search/Search.css";
+import Cities from "../../DataBase/data.js";
+import CityItemCard from "../CityItemCard/CityItemCard";
 import CitiesList from "../CitiesList/CitiesList";
 import RealWeatherAPI from "../RealWeatherAPI/RealWeatherAPI";
-import CityItemCard from "../CityItem/CityItemCard"
 
 const Search = () => {
-  // SEARCH----------------
   const [cities, setCities] = useState(Cities);
+
+  // SEARCH----------------
+
   const [filterSearch, setFilterSearch] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
   const filterBySearch = (e) => {
     setFilterSearch(e.target.value);
     console.log(filterSearch);
@@ -21,12 +21,8 @@ const Search = () => {
       const filtered = cities.filter((c) =>
         c.cityName.toLowerCase().includes(filterSearch)
       );
+      console.log(filtered);
       setCities(filtered);
-      // added this
-      setSearchQuery(filterSearch);
-      // added this
-      setFilterSearch("");
-      console.log(searchQuery);
     }
 
     if (e.key === "Delete") {
@@ -38,10 +34,8 @@ const Search = () => {
   // SEARCH------------------
 
   return (
-    <div>
-      {/* < SearchBar placeholder="Search.." data={Cities}/> */}
-
-      <div className="search">
+    <div className="SearchWrapper">
+      <div className="SearchInput">
         <input
           type="text"
           className="form-control"
@@ -51,15 +45,6 @@ const Search = () => {
           placeholder="Search..."
         />
       </div>
-
-      {/* <div>
-        {cities.map(i =>
-                <div key={i.cityName}>
-                    {i.cityName}
-                </div>
-            )};
-
-        </div> */}
 
       {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
       <div className="toggleComponentVisibility">
