@@ -7,6 +7,31 @@ import "../../Components/Search/Search.css";
 
 const CitiesList = () => {
 
+  
+  // SEARCH----------------
+  const [cities, setCities] = useState(Cities); 
+  const [filterSearch, setFilterSearch] = useState("");
+  const filterBySearch = (e) => {
+      setFilterSearch(e.target.value);
+      console.log(filterSearch);
+
+    };
+
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
+      const filtered = cities.filter(c => c.cityName.toLowerCase().includes(filterSearch));
+      setCities(filtered);
+    }
+
+    if (e.key === "Delete") {
+      setCities(Cities);
+      setFilterSearch("")
+      console.log("delete")
+    }
+}
+  // SEARCH------------------
+
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
   const totalPages = Math.ceil(Cities.length / itemsPerPage);

@@ -1,70 +1,81 @@
-import "./Search.css";
-import Cities from "../../DataBase/data.js";
+import './Search.css';
+import '../CityItem/CityItem.css';
 import { useState } from "react";
-import "../../Components/Search/Search.css";
-import CitiesList from "../CitiesList/CitiesList";
+import  Cities from "../../DataBase/data.js";
+import CityItemCard from "../CityItemCard/CityItemCard";
+// import Paginator from "../Paginator/Paginator";
+// import SearchBar from "../Search/Search1";
+
+
 
 const Search = () => {
-  // SEARCH----------------
+
   const [cities, setCities] = useState(Cities);
-  const [filterSearch, setFilterSearch] = useState("");
-  const filterBySearch = (e) => {
-    setFilterSearch(e.target.value);
-    console.log(filterSearch);
-  };
+    
+    // SEARCH----------------
+    
+    const [filterSearch, setFilterSearch] = useState("");
+    const filterBySearch = (e) => {
+      setFilterSearch(e.target.value);
+      console.log(filterSearch);
+    };
 
-  const handleEnter = (e) => {
-    if (e.key === "Enter") {
-      const filtered = cities.filter((c) =>
-        c.cityName.toLowerCase().includes(filterSearch)
-      );
-      setCities(filtered);
-    }
+    const handleEnter = (e) => {
+      if (e.key === "Enter") {
+        const filtered = cities.filter(c => c.cityName.toLowerCase().includes(filterSearch));
+        console.log(filtered);
+        setCities(filtered);
+      }
 
-    if (e.key === "Delete") {
-      setCities(Cities);
-      setFilterSearch("");
-      console.log("delete");
-    }
-  };
-  // SEARCH------------------
-
-  
+      if (e.key === "Delete") {
+        setCities(Cities);
+        setFilterSearch("")
+        console.log("delete")
+      }
+  }
+    // SEARCH------------------
+    
 
   return (
-    <div>
-      {/* < SearchBar placeholder="Search.." data={Cities}/> */}
+    <div className='SearchWrapper'>
+        <div className="SearchInput">
+          <input 
+            type="text" 
+            className="form-control" 
+            value={filterSearch} 
+            onChange={filterBySearch} 
+            onKeyUp ={handleEnter} 
+            placeholder="Search..." 
+          />
+        </div>
 
-      <div className="search">
-        <input
-          type="text"
-          className="form-control"
-          value={filterSearch}
-          onChange={filterBySearch}
-          onKeyUp={handleEnter}
-          placeholder="Search..."
-        />
-      </div>
+        {/* CityItem component --> */}
 
-      {/* <div>
-        {cities.map(i =>
-                <div key={i.cityName}>
-                    {i.cityName}
-                </div>
-            )};
+        {cities.map((i) => {
+          const FilteredData = Object.values(i.averageTemperatureCelsius);
+          console.log(i.averageTemperatureCelsius);
 
-        </div> */}
+          return (
+            <div key={i.cityName} className="CityItem">
+              <div className="CityItemCityName">{i.cityName}</div>
+              <div className="CityItemCardWrapper">
+                {FilteredData.map((data) => (
+                  <CityItemCard 
+                    month={data.monthName}  
+                    tempCelsius={data.tempCelsius}
+                  />
+                ))}
+              </div>
+            </div>
+          );
+        })}
 
-      {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
-      <div className="toggleComponentVisibility">
-        {filterSearch === "" ? (
-          <CitiesList />
-        ) : (
-          <div className="cityItemWrapper">{/* <CityItem/> */}</div>
-        )}
-      </div>
+        
+        {/* <-- CityItem component */}
+
     </div>
   );
+  
 };
 
 export default Search;
