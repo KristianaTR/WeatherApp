@@ -268,7 +268,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 8.2 },
             december: { monthName: "DEC", tempCelsius: 4.3 },
         },
-        cityPicture: "https://media.timeout.com/images/105186767/image.jpg",
+        cityPicture: "https://media.gq-magazine.co.uk/photos/5d13ac3ec265531bc4a379f4/16:9/w_2560%2Cc_limit/milan-hp-gq-17apr19_istock_b.jpg",
     },
     {
         cityName: "Rome",
@@ -286,7 +286,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 11.5 },
             december: { monthName: "DEC", tempCelsius: 8.4 },
         },
-        cityPicture: "https://media.timeout.com/images/105211673/image.jpg",
+        cityPicture: "https://www.shoreexcursionsgroup.com/img/tour/EUCVPANORAMA-2.jpg",
     },
     {
         cityName: "Napoli",
@@ -307,7 +307,7 @@ const Cities = [
         cityPicture: "https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/napoli_1.jpg",
     },
     {
-        cityName: "Luxembourg City",
+        cityName: "Luxembourg",
         averageTemperatureCelsius: {
             january: { monthName: "JAN", tempCelsius: 0.8 },
             february: { monthName: "FEB", tempCelsius: 1.4 },
@@ -340,7 +340,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 6.2 },
             december: { monthName: "DEC", tempCelsius: 0.6 },
         },
-        cityPicture: "https://www.ec2023bucharest.com/wp-content/uploads/2022/10/Bucharest.png",
+        cityPicture: "https://design-milk.com/images/2020/01/Rooftop-intercontinental-bucharest-Keshia-Design-Milk.jpeg",
     },
     {
         cityName: "Bratislava",
@@ -358,7 +358,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 4.2 },
             december: { monthName: "DEC", tempCelsius: -0.6 },
         },
-        cityPicture: "https://media-cdn.tripadvisor.com/media/photo-s/1a/7e/36/e2/caption.jpg",
+        cityPicture: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Bratislava_Panorama_R01.jpg",
     },
     {
         cityName: "Barcelona",
@@ -394,7 +394,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 16.6 },
             december: { monthName: "DEC", tempCelsius: 13.4 },
         },
-        cityPicture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslJ-51RMAQDRUS_UTx74CNW44SXHWHKXiRA&usqp=CAU",
+        cityPicture: "https://v9q2n5w7.rocketcdn.me/wp-content/uploads/2022/04/seville.jpg",
     },
     {
         cityName: "Stockholm",
@@ -484,7 +484,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 8.4 },
             december: { monthName: "DEC", tempCelsius: 6.2 },
         },
-        cityPicture: "https://www.citysparespace.com/wp-content/uploads/2023/02/london.jpeg",
+        cityPicture: "https://assets.editorial.aetnd.com/uploads/2019/03/topic-london-gettyimages-760251843-feature.jpg",
     }
 ]
 
