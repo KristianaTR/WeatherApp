@@ -63,4 +63,12 @@ button{
   width: 5rem;
   background-color: #26008050;
   color: white;
+  cursor: pointer;
+  transition: 0.2s all;
+  margin: 0 0.5rem;
+}
+
+button:hover {
+  background: rgba(146, 146, 219, 0.562);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
