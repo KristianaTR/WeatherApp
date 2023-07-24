@@ -7,10 +7,14 @@ import CitiesList from "../CitiesList/CitiesList";
 import RealWeatherAPI from "../RealWeatherAPI/RealWeatherAPI";
 
 const Search = () => {
+
+  // Define the initial state using in search functionality 
   const [cities, setCities] = useState(Cities);
 
+    // Define the  state to control search value 
   const [filterSearch, setFilterSearch] = useState("");
 
+  // Define the state for list of cities visible when some value is text in inout 
   const [showDropdown, setShowDropdown] = useState(true);
 
   // Define the CityData array to store the filtered cities
@@ -52,13 +56,14 @@ const Search = () => {
     setVisibleComponent(filtered)
   };
 
+    // Define the input clear function 
   const clearInput = () => {
     setCities(Cities);
     setFilterSearch("");
     setShowDropdown(true);
     setVisibleComponent(Cities)
   };
-
+// Define the choose city form dropdown list 
   const handleCityClick = (cityName) => {
     setFilterSearch(cityName);
     setShowDropdown(false);
