@@ -13,9 +13,6 @@ const RealWeatherAPI = ({ searchedCity }) => {
     main: {
       temp: null,
     },
-    weather: {
-      main: "",
-    },
   });
 
   useEffect(() => {
@@ -29,7 +26,6 @@ const RealWeatherAPI = ({ searchedCity }) => {
       .then((result) => {
         setWeather(result);
         setInput("");
-        console.log(result);
       });
   };
 
