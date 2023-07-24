@@ -14,8 +14,8 @@ const RealWeatherAPI = ({ searchedCity }) => {
       temp: null,
     },
     weather: {
-      main: ""
-    }
+      main: "",
+    },
   });
 
   useEffect(() => {
@@ -41,12 +41,14 @@ const RealWeatherAPI = ({ searchedCity }) => {
         value={input}
         onKeyUp={search}
       ></input> */}
-      <h3 className="RealWeatherAPIHeading">Temperature at the moment</h3>
-      {weather.main.temp !== null ? (
-        <p className="RealWeatherAPITemp">{Math.round(weather.main.temp)}°</p>
-      ) : (
-        <p></p>
-      )}
+      <div className="RealWeatherAPIInnerWrapper">
+        <h3 className="RealWeatherAPIHeading">Temperature at the moment: </h3>
+        {weather.main.temp !== null ? (
+          <p className="RealWeatherAPITemp">{Math.round(weather.main.temp)}°</p>
+        ) : (
+          <p></p>
+        )}
+      </div>
     </div>
   );
 };

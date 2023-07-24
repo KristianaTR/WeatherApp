@@ -14,8 +14,28 @@
     align-items: center;
 }
 
+.MainHeadingIcons img {
+    filter: invert(100%);
+    width: 2rem;
+}
+
 .MainHeadingDescription {
     font-size: 0.9rem;
-    color: #ffc759;
+    /* color: #ffc759; */
+    color: rgb(241, 232, 232);
     height: 1.5rem;
+    font-family: "Montserrat";
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.MainHeading {
+    text-align: center;
+    color: rgb(241, 232, 232);
+    font-weight: 900;
+    font-family: "Montserrat";
+    letter-spacing: 0.3rem;
+    margin-bottom: 0;
+    font-size: 2rem;
 }
