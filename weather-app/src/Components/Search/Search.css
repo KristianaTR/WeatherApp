@@ -9,14 +9,15 @@
   justify-content: center;
 }
 
-
 .search {
   height: 10vh;
   width: 100vw;
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
   flex-direction: column;
+  margin-top: 2rem;
+  position: relative;
 }
 
 .search input {
@@ -24,21 +25,42 @@
   border:0;
   border-radius: 0.5rem;
   font-size: 1rem;
-  height: 2rem;
-  width: 15rem;
+  height: 1.5rem;
+  width: 220px;
+  padding-left: 10px;
 }
 
-.searchIcon {
-  height: 1rem;
-  width: 2rem;
-  background-color: white;
-  display: grid;
-  place-items: center;
-}
 input:focus{
     outline: none;
 }
 
-#clearBtn {
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  height: 1.5rem;
+  width: 12rem
+}
+
+.dropdown:empty{
+  border: none;
+}
+
+.dropdown-row {
   cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
+}
+
+.dropdown-row:hover {
+  color: white;
+}
+
+button{
+  font-family: "Montserrat";
+  border-radius: 0.5rem;
+  border: none;
+  height: 1.5rem;
+  width: 5rem;
+  background-color: #26008050;
+  color: white;
 }
