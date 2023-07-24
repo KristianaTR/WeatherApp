@@ -52,7 +52,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 2.0 },
             december: { monthName: "DEC", tempCelsius: -0.9 },
         },
-        cityPicture: "https://www.daad.lv/files/2022/11/iStock-615926196_1920x900px.jpg",
+        cityPicture: "https://digitalnomads.world/wp-content/uploads/2021/03/tallinn-digital-nomads.jpg",
     },
     {
         cityName: "Tirana",
