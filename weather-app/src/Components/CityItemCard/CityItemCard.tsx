@@ -5,7 +5,7 @@ import './CityItemCard.css';
 interface CityItemCardProps {
     month: string;
     tempCelsius: number;
-  }
+}
 
 const CityItemCard: React.FC<CityItemCardProps> = ({month, tempCelsius}) => {
     // const [cityData, setCityData] = useState(filteredCityData);

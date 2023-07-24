@@ -1,7 +1,8 @@
 import "./Search.css";
 import { useState } from "react";
 import Cities from "../../DataBase/data.js";
-import CityItemCard from "../CityItemCard/CityItemCard";
+import CityItem, {CityData, MonthlyTemperature} from "../CityItem/CityItem";
+
 import CitiesList from "../CitiesList/CitiesList";
 import RealWeatherAPI from "../RealWeatherAPI/RealWeatherAPI";
 
@@ -12,16 +13,32 @@ const Search = () => {
 
   const [showDropdown, setShowDropdown] = useState(true);
 
+  // Define the CityData array to store the filtered cities
+  const [filteredCities, setFilteredCities] = useState<CityData[]>(() => {
+    // Transform the initial Cities data to match the CityData format
+    return Cities.map((city) => ({
+      cityName: city.cityName,
+      averageTemperatureCelsius: Object.values(city.averageTemperatureCelsius) as MonthlyTemperature[],
+    }));
+  });
+
   const filterBySearch = (event) => {
     setFilterSearch(event.target.value);
   }
 
   const handleEnter = () => {
     const filtered = cities.filter(city => city.cityName.toLowerCase().includes(filterSearch.toLowerCase()));
+    
+    // Convert the filtered data to the correct format using map
+    const formattedData: CityData[] = filtered.map((city) => ({
+      cityName: city.cityName,
+      averageTemperatureCelsius: Object.values(city.averageTemperatureCelsius) as MonthlyTemperature[],
+    }));
+    setFilteredCities(formattedData);
+
     setCities(filtered);
     setShowDropdown(false);
   }
-
 
     const clearInput = () => {
       setCities(Cities);
@@ -63,32 +80,7 @@ const Search = () => {
         ) : (
           <div>
             <RealWeatherAPI />
-            <div className="cityItemWrapper">
-              {/* <CityItem/> or CityItem return statement goes here*/}
-
-              {/* CityItem component --> */}
-
-              {cities.map((i) => {
-                const FilteredData = Object.values(i.averageTemperatureCelsius);
-                console.log(i.averageTemperatureCelsius);
-
-                return (
-                  <div key={i.cityName} className="CityItem">
-                    <div className="CityItemCityName">{i.cityName}</div>
-                    <div className="CityItemCardWrapper">
-                      {FilteredData.map((data) => (
-                        <CityItemCard
-                          month={data.monthName}
-                          tempCelsius={data.tempCelsius}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-
-              {/* <-- CityItem component */}
-            </div>
+            <CityItem cities={filteredCities}/>
           </div>
         )}
       </div>

@@ -1,3 +1,11 @@
+.CityItemCardWrapper {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .CityItemCard {
     background-color: #00008039;
     border-radius: 20px;
