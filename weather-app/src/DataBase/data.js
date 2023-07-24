@@ -15,11 +15,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 2.1 },
             december: { monthName: "DEC", tempCelsius: -2.3 },
         },
-        cityPicture: {
-            cityName: "riga",
-            pictureLink:
-                "https://www.daad.lv/files/2022/11/iStock-615926196_1920x900px.jpg",
-        },
+        cityPicture: "https://www.daad.lv/files/2022/11/iStock-615926196_1920x900px.jpg",
     },
     {
         cityName: "Vilnius",
@@ -37,11 +33,8 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 1.2 },
             december: { monthName: "DEC", tempCelsius: -2.9 },
         },
-        cityPicture: {
-            cityName: "vilnius",
-            pictureLink:
-                "https://cdn.britannica.com/26/143426-050-A3F11FE1/town-section-Vilnius-Lithuania.jpg",
-        },
+        cityPicture: "https://cdn.britannica.com/26/143426-050-A3F11FE1/town-section-Vilnius-Lithuania.jpg",
+
     },
     {
         cityName: "Tallin",
@@ -59,10 +52,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 2.0 },
             december: { monthName: "DEC", tempCelsius: -0.9 },
         },
-        cityPicture: {
-            cityName: "tallin",
-            pictureLink: "https://www.daad.lv/files/2022/11/iStock-615926196_1920x900px.jpg",
-        },
+        cityPicture: "https://www.daad.lv/files/2022/11/iStock-615926196_1920x900px.jpg",
     },
     {
         cityName: "Tirana",
@@ -80,10 +70,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 11.7 },
             december: { monthName: "DEC", tempCelsius: 8.1 },
         },
-        cityPicture: {
-            cityName: "tirana",
-            pictureLink: "https://emerging-europe.com/wp-content/uploads/2020/07/bigstock-tirana-albania-june-a-310037863-990x556.jpg",
-        },
+        cityPicture: "https://emerging-europe.com/wp-content/uploads/2020/07/bigstock-tirana-albania-june-a-310037863-990x556.jpg",
     },
     {
         cityName: "Andorra la Vella",
@@ -101,10 +88,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 5.7 },
             december: { monthName: "DEC", tempCelsius: 3.0 },
         },
-        cityPicture: {
-            cityName: "andorra la Vella",
-            pictureLink: "https://travelshelper.com/wp-content/uploads/2021/11/Andorra-la-Vella-Travel-Guide-Travel-S-Helper.jpg",
-        },
+        cityPicture: "https://travelshelper.com/wp-content/uploads/2021/11/Andorra-la-Vella-Travel-Guide-Travel-S-Helper.jpg",
     },
     {
         cityName: "Vienna",
@@ -122,10 +106,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 5.1 },
             december: { monthName: "DEC", tempCelsius: 1.1 },
         },
-        cityPicture: {
-            cityName: "vienna",
-            pictureLink: "https://res.klook.com/image/upload/Mobile/City/vfg4baggrck0egh36owk.jpg",
-        },
+        cityPicture: "https://res.klook.com/image/upload/Mobile/City/vfg4baggrck0egh36owk.jpg",
     },
     {
         cityName: "Brussels",
@@ -143,10 +124,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 6.8 },
             december: { monthName: "DEC", tempCelsius: 3.9 },
         },
-        cityPicture: {
-            cityName: "brussels",
-            pictureLink: "https://cdn.traghetti.com/porti/tallin187-54811.jpg",
-        },
+        cityPicture: "https://cdn.traghetti.com/porti/tallin187-54811.jpg",
     },
     {
         cityName: "Split",
@@ -164,10 +142,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 6.8 },
             december: { monthName: "DEC", tempCelsius: 3.9 },
         },
-        cityPicture: {
-            cityName: "split",
-            pictureLink: "https://www.brattle.com/wp-content/uploads/2021/05/Brussels.png",
-        },
+        cityPicture: "https://www.brattle.com/wp-content/uploads/2021/05/Brussels.png",
     },
     {
         cityName: "Amsterdam",
@@ -185,10 +160,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 6.6 },
             december: { monthName: "DEC", tempCelsius: 4.1 },
         },
-        cityPicture: {
-            cityName: "amsterdam",
-            pictureLink: "https://media.timeout.com/images/105504583/750/422/image.jpg",
-        },
+        cityPicture: "https://media.timeout.com/images/105504583/750/422/image.jpg",
     },
     {
         cityName: "Athens",
@@ -206,10 +178,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 14.6 },
             december: { monthName: "DEC", tempCelsius: 11.4 },
         },
-        cityPicture: {
-            cityName: "athens",
-            pictureLink: "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_webp/https://funworldfacts.com/wp-content/uploads/2022/12/athens-facts.jpg",
-        },
+        cityPicture: "https://cdn.shortpixel.ai/spai/q_lossy+ret_img+to_webp/https://funworldfacts.com/wp-content/uploads/2022/12/athens-facts.jpg",
     },
     {
         cityName: "Berlin",
@@ -227,10 +196,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 4.6 },
             december: { monthName: "DEC", tempCelsius: 1.3 },
         },
-        cityPicture: {
-            cityName: "berlin",
-            pictureLink: "https://www.berlin.de/binaries/asset/image_assets/6340464/ratio_2_1/1685015071/1500x750/",
-        },
+        cityPicture: "https://www.berlin.de/binaries/asset/image_assets/6340464/ratio_2_1/1685015071/1500x750/",
     },
     {
         cityName: "Budapest",
@@ -248,10 +214,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 5.2 },
             december: { monthName: "DEC", tempCelsius: 1.0 },
         },
-        cityPicture: {
-            cityName: "budapest",
-            pictureLink: "https://santorinidave.com/wp-content/uploads/2022/06/budapest-best-places-four-seasons.jpeg",
-        },
+        cityPicture: "https://santorinidave.com/wp-content/uploads/2022/06/budapest-best-places-four-seasons.jpeg",
     },
     {
         cityName: "Dublin",
@@ -269,10 +232,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 9.0 },
             december: { monthName: "DEC", tempCelsius: 7.4 },
         },
-        cityPicture: {
-            cityName: "dublin",
-            pictureLink: "https://osi.ie/wp-content/uploads/2018/08/dublin-skyline.jpg",
-        },
+        cityPicture: "https://osi.ie/wp-content/uploads/2018/08/dublin-skyline.jpg",
     },
     {
         cityName: "Helsinki",
@@ -290,10 +250,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 0.2 },
             december: { monthName: "DEC", tempCelsius: -4.1 },
         },
-        cityPicture: {
-            cityName: "helsinki",
-            pictureLink: "https://larnefc.com/wp-content/uploads/2023/07/128641704_gettyimages-1216740151.jpg",
-        },
+        cityPicture: "https://larnefc.com/wp-content/uploads/2023/07/128641704_gettyimages-1216740151.jpg",
     },
     {
         cityName: "Milan",
@@ -311,10 +268,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 8.2 },
             december: { monthName: "DEC", tempCelsius: 4.3 },
         },
-        cityPicture: {
-            cityName: "milan",
-            pictureLink: "https://media.timeout.com/images/105186767/image.jpg",
-        },
+        cityPicture: "https://media.timeout.com/images/105186767/image.jpg",
     },
     {
         cityName: "Rome",
@@ -332,10 +286,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 11.5 },
             december: { monthName: "DEC", tempCelsius: 8.4 },
         },
-        cityPicture: {
-            cityName: "rome",
-            pictureLink: "https://media.timeout.com/images/105211673/image.jpg",
-        },
+        cityPicture: "https://media.timeout.com/images/105211673/image.jpg",
     },
     {
         cityName: "Napoli",
@@ -353,10 +304,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 13.5 },
             december: { monthName: "DEC", tempCelsius: 10.3 },
         },
-        cityPicture: {
-            cityName: "napoli",
-            pictureLink: "https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/napoli_1.jpg",
-        },
+        cityPicture: "https://planetofhotels.com/guide/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/napoli_1.jpg",
     },
     {
         cityName: "Luxembourg City",
@@ -374,10 +322,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 4.8 },
             december: { monthName: "DEC", tempCelsius: 2.0 },
         },
-        cityPicture: {
-            cityName: "luxembourg city",
-            pictureLink: "https://cdn-cms.bookingexperts.nl/media/460/40/optimized.JPG",
-        },
+        cityPicture: "https://cdn-cms.bookingexperts.nl/media/460/40/optimized.JPG",
     },
     {
         cityName: "Bucharest",
@@ -395,10 +340,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 6.2 },
             december: { monthName: "DEC", tempCelsius: 0.6 },
         },
-        cityPicture: {
-            cityName: "bucharest",
-            pictureLink: "https://www.ec2023bucharest.com/wp-content/uploads/2022/10/Bucharest.png",
-        },
+        cityPicture: "https://www.ec2023bucharest.com/wp-content/uploads/2022/10/Bucharest.png",
     },
     {
         cityName: "Bratislava",
@@ -416,10 +358,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 4.2 },
             december: { monthName: "DEC", tempCelsius: -0.6 },
         },
-        cityPicture: {
-            cityName: "bratislava",
-            pictureLink: "https://media-cdn.tripadvisor.com/media/photo-s/1a/7e/36/e2/caption.jpg",
-        },
+        cityPicture: "https://media-cdn.tripadvisor.com/media/photo-s/1a/7e/36/e2/caption.jpg",
     },
     {
         cityName: "Barcelona",
@@ -437,11 +376,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 15.7 },
             december: { monthName: "DEC", tempCelsius: 13.2 },
         },
-        cityPicture: {
-            cityName: "barcelona",
-            pictureLink:
-                "https://media.cntraveller.com/photos/62d14e029bbb08746e6fd952/3:2/w_6000,h_4000,c_limit/barcelonaGettyImages-1386922276.jpeg",
-        },
+        cityPicture: "https://media.cntraveller.com/photos/62d14e029bbb08746e6fd952/3:2/w_6000,h_4000,c_limit/barcelonaGettyImages-1386922276.jpeg",
     },
     {
         cityName: "Seville",
@@ -459,11 +394,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 16.6 },
             december: { monthName: "DEC", tempCelsius: 13.4 },
         },
-        cityPicture: {
-            cityName: "seville",
-            pictureLink:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslJ-51RMAQDRUS_UTx74CNW44SXHWHKXiRA&usqp=CAU",
-        },
+        cityPicture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTslJ-51RMAQDRUS_UTx74CNW44SXHWHKXiRA&usqp=CAU",
     },
     {
         cityName: "Stockholm",
@@ -481,10 +412,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 3.5 },
             december: { monthName: "DEC", tempCelsius: -0.5 },
         },
-        cityPicture: {
-            cityName: "stockholm",
-            pictureLink: "https://media.timeout.com/images/105171709/image.jpg",
-        },
+        cityPicture: "https://media.timeout.com/images/105171709/image.jpg",
     },
     {
         cityName: "Zurich",
@@ -502,10 +430,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 4.6 },
             december: { monthName: "DEC", tempCelsius: 1.7 },
         },
-        cityPicture: {
-            cityName: "zurich",
-            pictureLink: "https://lp-cms-production.imgix.net/2021-08/shutterstockRF_314150237.jpg",
-        },
+        cityPicture: "https://lp-cms-production.imgix.net/2021-08/shutterstockRF_314150237.jpg",
     },
     {
         cityName: "Kyiv",
@@ -523,10 +448,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 3.1 },
             december: { monthName: "DEC", tempCelsius: -1.7 },
         },
-        cityPicture: {
-            cityName: "kyiv",
-            pictureLink: "https://cdn.britannica.com/18/194818-050-E7A7A993/view-Kiev-Ukraine.jpg",
-        },
+        cityPicture: "https://cdn.britannica.com/18/194818-050-E7A7A993/view-Kiev-Ukraine.jpg",
     },
     {
         cityName: "Edinburgh",
@@ -544,10 +466,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 7.2 },
             december: { monthName: "DEC", tempCelsius: 5.6 },
         },
-        cityPicture: {
-            cityName: "edinburgh",
-            pictureLink: "https://a.cdn-hotels.com/gdcs/production73/d1723/35b8f7e3-14c4-4d53-ae2f-5f7f6adb6aac.jpg",
-        },
+        cityPicture: "https://a.cdn-hotels.com/gdcs/production73/d1723/35b8f7e3-14c4-4d53-ae2f-5f7f6adb6aac.jpg",
     },
     {
         cityName: "London",
@@ -565,10 +484,7 @@ const Cities = [
             november: { monthName: "NOV", tempCelsius: 8.4 },
             december: { monthName: "DEC", tempCelsius: 6.2 },
         },
-        cityPicture: {
-            cityName: "london",
-            pictureLink: "https://www.citysparespace.com/wp-content/uploads/2023/02/london.jpeg",
-        },
+        cityPicture: "https://www.citysparespace.com/wp-content/uploads/2023/02/london.jpeg",
     }
 ]
 
