@@ -1,22 +1,50 @@
-import './CityItem.css'
+import './CityItem.css';
+import React from 'react';
+import CityItemCard from "../CityItemCard/CityItemCard";
 
-const CityItem = () => {
+export interface MonthlyTemperature {
+  monthName: string;
+  tempCelsius: number;
+}
+
+export interface CityData {
+  cityName: string;
+  averageTemperatureCelsius: MonthlyTemperature[];
+}
+
+interface CityItemProps {
+  cities: CityData[];
+}
+
+const CityItem: React.FC<CityItemProps> = ({cities}) => {
+  console.log(cities);
   return (
-    <div className='CityItem'>
-        <div className='CityItemCityName'>CityName</div>
-        <div className='CityItemCard'>
-            <div className="CityItemCardMonth">Jan</div>
-            <div className="CityItemCardIcon">
-                <img 
-                    width="25" 
-                    height="25" 
-                    src="https://img.icons8.com/ios/50/temperature-sensitive.png" 
-                    alt="temperature-sensitive"
-                />
+    <div className="cityItemWrapper">
+              {/* <CityItem/> or CityItem return statement goes here*/}
+
+              {/* CityItem component --> */}
+
+              {cities.map((i) => {
+                const FilteredData = Object.values(i.averageTemperatureCelsius);
+                console.log(i.averageTemperatureCelsius);
+
+                return (
+                  <div key={i.cityName} className="CityItem">
+                    <div className="CityItemCityName">{i.cityName}</div>
+                    <div className="CityItemCardWrapper">
+                      {FilteredData.map((data) => (
+                        <CityItemCard
+                          month={data.monthName}
+                          tempCelsius={data.tempCelsius}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* <-- CityItem component */}
             </div>
-            <div className="CityItemCardTemp">21.5 °C</div>
-        </div>
-    </div>
   )
 }
 
