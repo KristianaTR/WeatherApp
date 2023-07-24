@@ -1,43 +1,49 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import "./RealWeatherAPI.css";
 const api = {
   key: "292dba7d56b01b1aee08ec9152100b8b",
   base: "https://api.openweathermap.org/data/2.5/",
 };
 
-const RealWeatherAPI = () => {
-  const [input, setInput] = useState("");
+const RealWeatherAPI = ({ searchedCity }) => {
+  const [input, setInput] = useState(searchedCity);
   const [weather, setWeather] = useState({
     name: "",
     main: {
-      temp: null
+      temp: null,
+    },
+    weather: {
+      main: ""
     }
   });
 
-  const search = (event) => {
-    if (event.key === "Enter") {
-      fetch(`${api.base}weather?q=${input}&units=metric&appid=${api.key}`)
-        .then((res) => res.json())
-        .then((result) => {
-          setWeather(result);
-          setInput("");
-          console.log(result)
-        });
-        
-    }
+  useEffect(() => {
+    setInput(searchedCity);
+    getWeatherData(searchedCity);
+  }, [searchedCity]);
+
+  const getWeatherData = (city) => {
+    fetch(`${api.base}weather?q=${input}&units=metric&appid=${api.key}`)
+      .then((res) => res.json())
+      .then((result) => {
+        setWeather(result);
+        setInput("");
+        console.log(result);
+      });
   };
 
   return (
     <div className="RealWeatherAPIWrapper">
-      <input
+      {/* <input
         type="text"
         onChange={(event) => setInput(event.target.value)}
         value={input}
         onKeyUp={search}
-      ></input>
-      <p>{weather.name}</p>
+      ></input> */}
+      <h3 className="RealWeatherAPIHeading">Temperature at the moment</h3>
       {weather.main.temp !== null ? (
-        <p>{Math.round(weather.main.temp)}</p>
+        <p className="RealWeatherAPITemp">{Math.round(weather.main.temp)}°</p>
       ) : (
         <p></p>
       )}
@@ -46,4 +52,3 @@ const RealWeatherAPI = () => {
 };
 
 export default RealWeatherAPI;
-

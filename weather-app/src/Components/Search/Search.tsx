@@ -22,9 +22,17 @@ const Search = () => {
     }));
   });
 
+  //--for toggling component visibility
+  const [visibleComponent, setVisibleComponent] = useState(Cities);
+  //-------
+
+  //--for real weather API
+  const [searchQuery, setSearchQuery] = useState("")
+  //-------------
+
   const filterBySearch = (event) => {
     setFilterSearch(event.target.value);
-  }
+  };
 
   const handleEnter = () => {
     const filtered = cities.filter(city => city.cityName.toLowerCase().includes(filterSearch.toLowerCase()));
@@ -37,49 +45,70 @@ const Search = () => {
     setFilteredCities(formattedData);
 
     setCities(filtered);
+    setSearchQuery(filterSearch)
     setShowDropdown(false);
-  }
+    setVisibleComponent(filtered)
+  };
 
-    const clearInput = () => {
-      setCities(Cities);
-      setFilterSearch("");
-      setShowDropdown(true);
-    }
-    
-    const handleCityClick = (cityName) => {
-      setFilterSearch(cityName);
-      setShowDropdown(false);
-    };
-    
+  const clearInput = () => {
+    setCities(Cities);
+    setFilterSearch("");
+    setShowDropdown(true);
+    setVisibleComponent(Cities)
+  };
 
+  const handleCityClick = (cityName) => {
+    setFilterSearch(cityName);
+    setShowDropdown(false);
+  };
 
   return (
     <div className="SearchWrapper">
       <div className="search">
-      <div>
-          <input type="text" className="search-inner" value={filterSearch} onChange={filterBySearch}  placeholder="Search..." />
-            <button className="enter-btn" onClick ={handleEnter}>Search</button>
-            {filterSearch !== "" && <button className="reset-btn" onClick={clearInput} >Reset</button>}
+        <div>
+          <input
+            type="text"
+            className="search-inner"
+            value={filterSearch}
+            onChange={filterBySearch}
+            placeholder="Search..."
+          />
+          <button className="enter-btn" onClick={handleEnter}>
+            Search
+          </button>
+          {filterSearch !== "" && (
+            <button className="reset-btn" onClick={clearInput}>
+              Reset
+            </button>
+          )}
         </div>
-        {showDropdown && (<div className="dropdown">
-              {Cities.filter(city => {
-                const searchTerm = filterSearch.toLowerCase();
-                const cityName = city.cityName.toLowerCase();
+        {showDropdown && (
+          <div className="dropdown">
+            {Cities.filter((city) => {
+              const searchTerm = filterSearch.toLowerCase();
+              const cityName = city.cityName.toLowerCase();
 
-                return searchTerm && cityName.startsWith(searchTerm) 
-              })
-              .map((city) => <div key={city.cityName} className="dropdown-row" onClick={() => handleCityClick(city.cityName)}>{city.cityName}</div>)}
-            </div> )}
-
+              return searchTerm && cityName.startsWith(searchTerm);
+            }).map((city) => (
+              <div
+                key={city.cityName}
+                className="dropdown-row"
+                onClick={() => handleCityClick(city.cityName)}
+              >
+                {city.cityName}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
       <div className="toggleComponentVisibility">
-        {filterSearch === "" ? (
+        {visibleComponent === Cities ? (
           <CitiesList />
         ) : (
           <div>
-            <RealWeatherAPI />
+            <RealWeatherAPI searchedCity={searchQuery}/>
             <CityItem cities={filteredCities}/>
           </div>
         )}

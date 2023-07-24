@@ -9,8 +9,8 @@ interface CityItemCardProps {
 
 const CityItemCard: React.FC<CityItemCardProps> = ({month, tempCelsius}) => {
     // const [cityData, setCityData] = useState(filteredCityData);
-    console.log(month);
-    console.log(tempCelsius);
+    // console.log(month);
+    // console.log(tempCelsius);
 
     // const cityData = filteredCityData[0];
     // console.log(cityData);
