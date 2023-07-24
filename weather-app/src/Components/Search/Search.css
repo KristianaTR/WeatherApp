@@ -72,3 +72,15 @@ button:hover {
   background: rgba(146, 146, 219, 0.562);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+@media screen and (max-width: 375px) {
+  .search div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  button {
+    margin: 0.5rem;
+  }
+}

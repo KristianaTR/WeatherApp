@@ -26,3 +26,13 @@
   color: aliceblue;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 375px) {
+  .RealWeatherAPIHeading {
+    font-size: 0.8rem;
+  }
+
+  .RealWeatherAPITemp {
+    font-size: 0.8rem;
+  }
+}
