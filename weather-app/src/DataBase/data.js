@@ -37,7 +37,7 @@ const Cities = [
 
     },
     {
-        cityName: "Tallin",
+        cityName: "Tallinn",
         averageTemperatureCelsius: {
             january: { monthName: "JAN", tempCelsius: -2.9 },
             february: { monthName: "FEB", tempCelsius: -3.6 },
