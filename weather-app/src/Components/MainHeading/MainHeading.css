@@ -40,3 +40,13 @@
     margin-bottom: 0;
     font-size: 2rem;
 }
+
+@media screen and (max-width: 375px) {
+    .MainHeading {
+        font-size: 1rem;
+    }
+
+    .MainHeadingDescription {
+        font-size: 0.6rem;
+    }
+}
