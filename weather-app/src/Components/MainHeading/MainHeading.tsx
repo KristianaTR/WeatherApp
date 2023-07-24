@@ -13,7 +13,7 @@ const MainHeading = () => {
             
         </div>
         <h1 className="MainHeading">
-            Weather app
+            WEATHER APP
         </h1>
         <p className='MainHeadingDescription'>
             Here you can easily find the average temperature of the months in the largest cities in Europe

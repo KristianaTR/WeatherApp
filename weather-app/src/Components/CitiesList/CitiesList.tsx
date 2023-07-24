@@ -7,30 +7,6 @@ import "../../Components/Search/Search.css";
 
 const CitiesList = () => {
 
-  
-  // SEARCH----------------
-  const [cities, setCities] = useState(Cities);
-
-  const [filterSearch, setFilterSearch] = useState("");
-  
-  const filterBySearch = (e) => {
-      setFilterSearch(e.target.value);
-      console.log(filterSearch);
-
-    };
-
-  const handleEnter = () => {
-      const filtered = cities.filter(c => c.cityName.toLowerCase().includes(filterSearch.toLowerCase()));
-      setCities(filtered);
-}
-
-const clearInput = () => {
-  setCities(Cities);
-  setFilterSearch("");
-}
-  // SEARCH------------------
-
-
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
   const totalPages = Math.ceil(Cities.length / itemsPerPage);
@@ -234,10 +210,6 @@ const clearInput = () => {
           handlePageChange={handlePageChange}
         />
       </div>
-      {/* CityItem component displayed when search is clicked and hidden when search is empty */}
-      <div className="cityItemWrapper">
-        {/* <CityItem/> */}
-        </div>
     </div>
   );
 };
