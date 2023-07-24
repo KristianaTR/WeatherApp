@@ -19,6 +19,7 @@ const Search = () => {
     return Cities.map((city) => ({
       cityName: city.cityName,
       averageTemperatureCelsius: Object.values(city.averageTemperatureCelsius) as MonthlyTemperature[],
+      cityPicture: city.cityPicture,
     }));
   });
 
@@ -41,6 +42,7 @@ const Search = () => {
     const formattedData: CityData[] = filtered.map((city) => ({
       cityName: city.cityName,
       averageTemperatureCelsius: Object.values(city.averageTemperatureCelsius) as MonthlyTemperature[],
+      cityPicture: city.cityPicture,
     }));
     setFilteredCities(formattedData);
 

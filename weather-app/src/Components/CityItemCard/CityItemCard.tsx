@@ -28,8 +28,8 @@ const CityItemCard: React.FC<CityItemCardProps> = ({month, tempCelsius}) => {
        
         <div className="CityItemCardIcon">
             <img 
-                width="25" 
-                height="25" 
+                width="20" 
+                height="20" 
                 src="https://img.icons8.com/ios/50/temperature-sensitive.png" 
                 alt="temperature-sensitive"
             />
