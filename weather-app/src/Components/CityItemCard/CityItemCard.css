@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .CityItemCard {
@@ -15,7 +16,7 @@
     justify-content: center;
     align-items: center;
     min-width: 50px;
-    margin: 0 0.3rem;
+    margin: 0 0.3rem 0.3rem 0.3rem;
 }
 
 .CityItemCardMonth {
@@ -35,4 +36,21 @@
     font-size: 0.8rem;
     color:white;
     font-weight: 600;
+}
+
+@media screen and (max-width: 375px) {
+    .CityItemCardMonth {
+        font-size: 0.6rem;
+        height: 1rem;
+    }
+
+    .CityItemCardIcon {
+        display: none;
+    }
+
+    .CityItemCardTemp {
+        font-size: 0.6rem;
+        font-weight: 500;
+        text-decoration: overline;
+    }
 }
