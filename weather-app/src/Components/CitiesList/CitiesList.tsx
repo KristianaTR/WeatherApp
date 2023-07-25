@@ -4,14 +4,11 @@ import { useState } from "react";
 import Paginator from "../Paginator/Paginator";
 import "../../Components/Search/Search.css";
 
-
 const CitiesList = () => {
-
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
   const totalPages = Math.ceil(Cities.length / itemsPerPage);
 
-  
   const showCities = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -21,29 +18,28 @@ const CitiesList = () => {
     const CitiesListClassNames = (temperature: number) => {
       let temperatureClass = "";
 
-      if (temperature <= -20) {
-        temperatureClass = "color-20andMore";
-      } else if (temperature > -20 && temperature <= -15) {
-        temperatureClass = "color-20to-15";
-      } else if (temperature > -15 && temperature <= -10) {
-        temperatureClass = "color-15to-10";
-      } else if (temperature > -10 && temperature <= -5) {
-        temperatureClass = "color-10to-5";
-      } else if (temperature > -5 && temperature <= 0) {
-        temperatureClass = "color-5to0";
-      } else if (temperature > 0 && temperature <= 5) {
-        temperatureClass = "color0to5";
-      } else if (temperature > 5 && temperature <= 10) {
-        temperatureClass = "color5to10";
-      } else if (temperature > 10 && temperature <= 15) {
-        temperatureClass = "color10to15";
-      } else if (temperature > 15 && temperature <= 20) {
-        temperatureClass = "color15to20";
-      } else if (temperature > 20 && temperature <= 25) {
-        temperatureClass = "color20to25";
-      } else if (temperature > 25 && temperature <= 30) {
-        temperatureClass = "color25to30";
-      } else if (temperature > 30) {
+      const temperatureRanges: [number, string][] = [
+        [-20, "color-20andMore"],
+        [-15, "color-20to-15"],
+        [-10, "color-15to-10"],
+        [-5, "color-10to-5"],
+        [0, "color-5to0"],
+        [5, "color0to5"],
+        [10, "color5to10"],
+        [15, "color10to15"],
+        [20, "color15to20"],
+        [25, "color20to25"],
+        [30, "color25to30"],
+      ];
+
+      for (const [rangeTemp, rangeClass] of temperatureRanges) {
+        if (temperature <= rangeTemp) {
+          temperatureClass = rangeClass;
+          break;
+        }
+      }
+
+      if (!temperatureClass) {
         temperatureClass = "color30plus";
       }
 
@@ -199,7 +195,7 @@ const CitiesList = () => {
 
   return (
     <div>
-      <div className="citiesListTableWrapper"> 
+      <div className="citiesListTableWrapper">
         <table className="CitiesListTable">
           <thead>{displayedMonthNames()}</thead>
           <tbody>{showCities()}</tbody>

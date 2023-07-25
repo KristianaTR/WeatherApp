@@ -1,52 +1,52 @@
 .MainHeadingWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .MainHeadingIcons {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .MainHeadingIcons img {
-    filter: invert(100%);
-    width: 2rem;
+  filter: invert(100%);
+  width: 2rem;
 }
 
 .MainHeadingDescription {
-    font-size: 0.9rem;
-    /* color: #ffc759; */
-    color: rgb(241, 232, 232);
-    height: 1.5rem;
-    font-family: "Montserrat";
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0 2rem;
+  font-size: 0.9rem;
+  /* color: #ffc759; */
+  color: rgb(241, 232, 232);
+  height: 1.5rem;
+  font-family: "Montserrat";
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 2rem;
 }
 
-.MainHeading {
-    text-align: center;
-    color: rgb(241, 232, 232);
-    font-weight: 900;
-    font-family: "Montserrat";
-    letter-spacing: 0.3rem;
-    margin-bottom: 0;
-    font-size: 2rem;
+.MainHeadingTitle {
+  text-align: center;
+  color: rgb(241, 232, 232);
+  font-weight: 900;
+  font-family: "Montserrat";
+  letter-spacing: 0.3rem;
+  margin-bottom: 0;
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 375px) {
-    .MainHeading {
-        font-size: 1rem;
-    }
+  .MainHeadingTitle {
+    font-size: 1rem;
+  }
 
-    .MainHeadingDescription {
-        font-size: 0.6rem;
-    }
+  .MainHeadingDescription {
+    font-size: 0.6rem;
+  }
 }
