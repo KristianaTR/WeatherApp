@@ -1,20 +1,19 @@
 import "./Search.css";
 import { useState } from "react";
 import Cities from "../../DataBase/data.js";
-import CityItem, {CityData, MonthlyTemperature} from "../CityItem/CityItem";
+import CityItem, { CityData, MonthlyTemperature } from "../CityItem/CityItem";
 
 import CitiesList from "../CitiesList/CitiesList";
 import RealWeatherAPI from "../RealWeatherAPI/RealWeatherAPI";
 
 const Search = () => {
-
-  // Define the initial state using in search functionality 
+  // Define the initial state using in search functionality
   const [cities, setCities] = useState(Cities);
 
-    // Define the  state to control search value 
+  // Define the  state to control search value
   const [filterSearch, setFilterSearch] = useState("");
 
-  // Define the state for list of cities visible when some value is text in inout 
+  // Define the state for list of cities visible when some value is text in inout
   const [showDropdown, setShowDropdown] = useState(true);
 
   // Define the CityData array to store the filtered cities
@@ -22,7 +21,9 @@ const Search = () => {
     // Transform the initial Cities data to match the CityData format
     return Cities.map((city) => ({
       cityName: city.cityName,
-      averageTemperatureCelsius: Object.values(city.averageTemperatureCelsius) as MonthlyTemperature[],
+      averageTemperatureCelsius: Object.values(
+        city.averageTemperatureCelsius
+      ) as MonthlyTemperature[],
       cityPicture: city.cityPicture,
     }));
   });
@@ -32,7 +33,7 @@ const Search = () => {
   //-------
 
   //--for real weather API
-  const [searchQuery, setSearchQuery] = useState("")
+  const [searchQuery, setSearchQuery] = useState("");
   //-------------
 
   const filterBySearch = (event) => {
@@ -40,33 +41,60 @@ const Search = () => {
   };
 
   const handleEnter = () => {
-    const filtered = cities.filter(city => city.cityName.toLowerCase().includes(filterSearch.toLowerCase()));
-    
+    const filtered = cities.filter((city) =>
+      city.cityName.toLowerCase().includes(filterSearch.toLowerCase())
+    );
+
     // Convert the filtered data to the correct format using map
     const formattedData: CityData[] = filtered.map((city) => ({
       cityName: city.cityName,
-      averageTemperatureCelsius: Object.values(city.averageTemperatureCelsius) as MonthlyTemperature[],
+      averageTemperatureCelsius: Object.values(
+        city.averageTemperatureCelsius
+      ) as MonthlyTemperature[],
       cityPicture: city.cityPicture,
     }));
     setFilteredCities(formattedData);
 
     setCities(filtered);
-    setSearchQuery(filterSearch)
+    setSearchQuery(filterSearch);
     setShowDropdown(false);
-    setVisibleComponent(filtered)
+    setVisibleComponent(filtered);
   };
 
-    // Define the input clear function 
+  // Define the input clear function
   const clearInput = () => {
     setCities(Cities);
     setFilterSearch("");
     setShowDropdown(true);
-    setVisibleComponent(Cities)
+    setVisibleComponent(Cities);
   };
-// Define the choose city form dropdown list 
+  // Define the choose city form dropdown list
   const handleCityClick = (cityName) => {
     setFilterSearch(cityName);
     setShowDropdown(false);
+  };
+
+  const showDropdownList = () => {
+    return (
+      showDropdown && (
+        <div className="dropdown">
+          {Cities.filter((city) => {
+            const searchTerm = filterSearch.toLowerCase();
+            const cityName = city.cityName.toLowerCase();
+
+            return searchTerm && cityName.startsWith(searchTerm);
+          }).map((city) => (
+            <div
+              key={city.cityName}
+              className="dropdown-row"
+              onClick={() => handleCityClick(city.cityName)}
+            >
+              {city.cityName}
+            </div>
+          ))}
+        </div>
+      )
+    );
   };
 
   return (
@@ -89,24 +117,9 @@ const Search = () => {
             </button>
           )}
         </div>
-        {showDropdown && (
-          <div className="dropdown">
-            {Cities.filter((city) => {
-              const searchTerm = filterSearch.toLowerCase();
-              const cityName = city.cityName.toLowerCase();
 
-              return searchTerm && cityName.startsWith(searchTerm);
-            }).map((city) => (
-              <div
-                key={city.cityName}
-                className="dropdown-row"
-                onClick={() => handleCityClick(city.cityName)}
-              >
-                {city.cityName}
-              </div>
-            ))}
-          </div>
-        )}
+        {/* This can be a seperate component maybe?  */}
+        {showDropdownList()}
       </div>
 
       {/* Cities list div visible when search bar is empty and hidden when search button is clicked */}
@@ -115,8 +128,8 @@ const Search = () => {
           <CitiesList />
         ) : (
           <div>
-            <RealWeatherAPI searchedCity={searchQuery}/>
-            <CityItem cities={filteredCities}/>
+            <RealWeatherAPI searchedCity={searchQuery} />
+            <CityItem cities={filteredCities} />
           </div>
         )}
       </div>
